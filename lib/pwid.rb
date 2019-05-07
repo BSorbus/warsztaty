@@ -53,7 +53,7 @@ module PwidModule
     start_run = Time.current
     load_individuals
     load_clubs
-    load_devices
+    #load_devices
     puts "START: #{start_run}  END: #{Time.current}"
     puts '----------------------------------------------------------------'
   end
