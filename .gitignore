@@ -33,6 +33,7 @@
 /config/credentials.yml.enc
 /config/master.key
 /config/secrets.yml
+/config/storage.yml
 /config/deploy.rb
 
 /db/seeds/*

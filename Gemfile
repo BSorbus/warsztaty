@@ -75,10 +75,10 @@ gem 'rack-attack'
 gem "actionpack-page_caching"
 gem "actionpack-action_caching"
 
-gem 'whenever', require: false
+#gem 'whenever', require: false
 
 gem 'mina'
-gem 'mina-whenever', require: false
+#gem 'mina-whenever', require: false
 
 gem 'inky-rb', require: 'inky'
 gem 'premailer-rails'

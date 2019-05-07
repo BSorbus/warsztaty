@@ -45,6 +45,8 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  config.active_storage.service = :local
+
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
