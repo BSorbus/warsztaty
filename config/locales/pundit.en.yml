@@ -1,0 +1,25 @@
+en:
+  pundit:
+    default: ' SECURITY: Access denied!'
+    work_policy:
+      index?: ' SECURITY: You cannot watch list of works!'
+    role_policy:
+      index?: ' SECURITY: You cannot watch list of roles!'
+      show?: ' SECURITY: You cannot watch this role!'
+      update?: ' SECURITY: You cannot edit this role!'
+      create?: ' SECURITY: You cannot create roles!'
+      destroy?: ' SECURITY: You cannot destroy roles!'
+      add_remove_role_user?: ' SECURITY: You cannot add/remove roles for users!'
+    user_policy:
+      index?: ' SECURITY: You cannot watch list of users!'
+      show?: ' SECURITY: You cannot watch this user!'
+      update?: ' SECURITY: You cannot edit this user!'
+      create?: ' SECURITY: You cannot create users!'
+      destroy?: ' SECURITY: You cannot destroy users!'
+      add_remove_role_user?: ' SECURITY: You cannot add/remove roles for users!'
+    project_policy:
+      index?: ' SECURITY: You cannot watch list of projects!'
+      show?: ' SECURITY: You cannot watch this project!'
+      update?: ' SECURITY: You cannot edit this project!'
+      create?: ' SECURITY: You cannot create projects!'
+      destroy?: ' SECURITY: You cannot destroy this project!'
