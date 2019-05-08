@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  include ActionView::Helpers::UrlHelper # for link_to
+  include ActionView::Helpers::AssetTagHelper # for image_tag
   delegate :url_helpers, to: 'Rails.application.routes'
 
   # Include default devise modules. Others available are:
@@ -70,6 +72,15 @@ class User < ApplicationRecord
 
   def name_as_link
     "<a href=#{url_helpers.user_path(self)}>#{self.name}</a>".html_safe
+  end
+
+  def photo_link
+    if self.photo.attached?
+      link_to(image_tag(self.photo.variant(resize: "100x100")), url_helpers.user_path(self)).html_safe 
+    else
+      ""
+    end
+    #link_to(self.name, url_helpers.user_path(self)).html_safe
   end
 
   def user_link_add_remove(role, has_user)
