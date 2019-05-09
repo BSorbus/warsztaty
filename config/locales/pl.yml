@@ -27,6 +27,7 @@ pl:
   static_pages:
     home:
       title: 'Warsztaty pomiarowe RSP'
+      title_sub: 'Supraśl, 20-24 maj 2019'
     introduction:
       title: 'Wprowadzenie i agenda'
       navbar: 'Wprowadzenie'
@@ -60,8 +61,15 @@ pl:
     works_in_panel:
       title: 'Dziennik działań'
   surveys:
+    carousel:
+      navbar: 'Ankieta'
+      title: 'Wypełnienie ankiety i przeglądanie wyników wymaga zalogowania'
     index:
       title: 'Ankiety'
+    new:
+      title: 'Nowa Ankieta'
+    edit:
+      title: 'Edyja Ankiety'
     show:
       title: 'Ankieta'
       fieldset_title: 'Uwagi dotyczące szkolenia/warsztatów'

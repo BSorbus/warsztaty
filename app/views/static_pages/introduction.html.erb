@@ -82,7 +82,7 @@
           <tr>
             <td>2019-05-23</td>
             <td>13:00 - 14:00</td>
-            <td>Obid "poligonowy"</td>
+            <td>Obiad "poligonowy"</td>
             <td>Stoły, krzesła, woda do umycia rąk, toaleta (toy-toy)</td>
             <td>Ustalenie miejsca, menu i uzgodnienie z dostawcą kateringu.</td>
           <tr>
@@ -127,6 +127,26 @@
         <span class="index-title"><%= t '.place' %></span>
       </h3>
     </div> <!--/col-sm-12 -->
+
+    <br>
+    <div class="col-sm-4">
+      <p>Miejsce szkolenia:</p>
+      <%= image_tag('marker.png', size: "48x48") %>
+      <%= link_to "Nawigacja", "https://www.google.pl/maps/place/Knieja.+Centrum+konferencyjno+-+bankietowe/@53.2022521,23.3342796,17z/data=!3m1!4b1!4m5!3m4!1s0x46e00046d2a0bfbb:0xba42c12ba48295b2!8m2!3d53.2022521!4d23.3364683?hl=pl", :target => "_blank" %>
+    </div> <!--/col-sm-12 -->
+
+    <div class="col-sm-4">
+      <p>Miejsce zbiórki (zad. 1 i zad. 2):</p>
+      <%= image_tag('marker3.png', size: "48x48") %>
+      <%= link_to "Nawigacja", "https://www.google.pl/maps/place/53%C2%B014'52.7%22N+23%C2%B028'09.0%22E/@53.247973,23.466958,17z/data=!3m1!4b1!4m13!1m6!3m5!1s0x46dffddc6189b29f:0x5d2d0b1c8862adbd!2sZajazd+Soko%C5%82da!8m2!3d53.24796!4d23.469157!3m5!1s0x0:0x0!7e2!8m2!3d53.2479728!4d23.4691516?hl=pl", :target => "_blank" %>
+    </div> <!--/col-sm-12 -->
+
+    <div class="col-sm-4">
+      <p>Poligon pomiarowy (Zad.3 i zad. 4):</p>
+      <%= image_tag('marker2.png', size: "48x48") %>
+      <%= link_to "Nawigacja", "https://www.google.pl/maps/place/Folwark+Nadawki/@53.1822042,23.150403,17z/data=!3m1!4b1!4m5!3m4!1s0x471ffda433e20ad3:0x72dac635d76923eb!8m2!3d53.182201!4d23.152597?hl=pl", :target => "_blank" %>
+    </div> <!--/col-sm-12 -->
+
   </div> <!--/row -->
 
   <br>
@@ -142,17 +162,28 @@
   //var lat            = <%#= partial_data.lat %>;
   //var lon            = <%#= partial_data.lng %>;
   var lat            = 53.202200;
-  var lon            = 23.335400;
+  var lon            = 23.336400;
 
-  var zoom           = 15;
+  var lat2           = 53.247973;
+  var lon2           = 23.469152;
+
+  var lat3           = 53.182220;
+  var lon3           = 23.152613;
+
+
+  var zoom           = 11;
   var size = new OpenLayers.Size(36,36);
   var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
   var icon = new OpenLayers.Icon("<%= asset_path('marker.png', locale: locale) %>", size, offset);
+  var icon2 = new OpenLayers.Icon("<%= asset_path('marker2.png', locale: locale) %>", size, offset);
+  var icon3 = new OpenLayers.Icon("<%= asset_path('marker3.png', locale: locale) %>", size, offset);
 
 
   var fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
   var toProjection   = new OpenLayers.Projection("EPSG:900913"); // to Spherical Mercator Projection
   var position       = new OpenLayers.LonLat(lon, lat).transform( fromProjection, toProjection);
+  var position2      = new OpenLayers.LonLat(lon2, lat2).transform( fromProjection, toProjection);
+  var position3      = new OpenLayers.LonLat(lon3, lat3).transform( fromProjection, toProjection);
 
 
   map = new OpenLayers.Map("idMap");
@@ -164,6 +195,8 @@
 
   map.addLayer(markers);
   markers.addMarker(new OpenLayers.Marker(position, icon));
+  markers.addMarker(new OpenLayers.Marker(position2, icon2));
+  markers.addMarker(new OpenLayers.Marker(position3, icon3));
 
   map.setCenter(position, zoom);
 </script>

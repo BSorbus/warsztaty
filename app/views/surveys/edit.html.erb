@@ -1,6 +1,21 @@
-<h1>Editing Survey</h1>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="panel panel-survey">
+      <div class="panel-heading">
+        <div class="panel-title">
+          <span class="fa fa-list-ol">&nbsp;</span>
+          <span><%=t ".title"%>:&nbsp;<%= @survey.fullname %></span>    
+        </div>
+      </div>
+        <div class="panel-body">
+          <div class="col-sm-1">
+            <h1><span class="glyphicon glyphicon-edit"></span></h1> 
+          </div> <!--/col-sm-1-->
 
-<%= render 'form', survey: @survey %>
+          <%#= render 'form', survey: @survey %>
+    
+        </div>
+    </div> <!-- /panel -->
+  </div> <!-- /col-sm-12-->
+</div> <!-- /row -->
 
-<%= link_to 'Show', @survey %> |
-<%= link_to 'Back', surveys_path %>

@@ -190,6 +190,14 @@ legend.my-fieldset {
   text-decoration: none !important;
 }
 
+.panel-work {
+  border-color: #ddd;
+  .panel-heading {
+    background: #818FAB; 
+    color: white;
+  } 
+}
+
 .panel-user {
   border-color: #ddd;  
   .panel-heading {
@@ -206,10 +214,10 @@ legend.my-fieldset {
   }
 }
 
-.panel-work {
+.panel-survey {
   border-color: #ddd;
   .panel-heading {
-    background: #818FAB; 
+    background: $brand-primary; //#1A3069;
     color: white;
   } 
 }

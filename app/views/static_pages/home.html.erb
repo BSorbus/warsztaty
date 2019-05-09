@@ -26,6 +26,13 @@
           <div class="item active">
             <%= image_tag("00.png") %>
             <div class="carousel-caption">
+              <h3><strong><%= t("static_pages.home.title") %></strong></h3>
+              <h4><%= t("static_pages.home.title_sub") %></h4>
+            </div>
+          </div>
+          <div class="item">
+            <%= image_tag("01.png") %>
+            <div class="carousel-caption">
               <%= link_to static_pages_introduction_path do %>
                 <span class="btn btn-primary"><%= t("static_pages.introduction.navbar") %></span>
               <% end %>
@@ -33,23 +40,12 @@
             </div>
           </div>
           <div class="item">
-            <%= image_tag("01.png") %>
-            <div class="carousel-caption">
-              <%= link_to individuals_path do %>
-                <span class="btn btn-primary"><%= t("individuals.index.navbar") %></span>
-              <% end %>
-              <br>
-              <h4><%= t("individuals.index.title") %></h4>
-            </div>
-          </div>
-          <div class="item">
             <%= image_tag("02.jpg") %>
             <div class="carousel-caption">
-              <%= link_to clubs_path do %>
-                <span class="btn btn-primary"><%= t("clubs.index.navbar") %></span>
+              <%= link_to surveys_path do %>
+                <span class="btn btn-primary"><%= t("surveys.carousel.navbar") %></span>
               <% end %>
-              <br>
-              <h4><%= t("clubs.index.title") %></h4>
+              <h4><%= t("surveys.carousel.title") %></h4>
             </div>
           </div>
         </div>

@@ -11,6 +11,10 @@ class Survey < ApplicationRecord
       parameters: self.to_json(except: [:user_id], include: {user: {only: [:id, :name, :email]}}))
   end
 
+  def fullname
+    "#{self.user.name} [ostatnia aktualizacja: #{self.updated_at.strftime('%Y-%m-%d %H:%M:%S')}]"
+  end
+
   def number_as_link
     "<a href=#{url_helpers.survey_path(self)}>#{self.user.name}</a>".html_safe
   end
