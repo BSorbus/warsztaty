@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h3 class="center">
+        <span class="fa fa-list-ol glyp-index-title" aria-hidden="true"></span>
+        <span class="index-title"><%= t '.title' %></span>
+      </h3>
+    </div> <!--/col-sm-12 -->
+  </div> <!--/row -->
+
+  <%= render partial: "data_question_1",        locals: {partial_data: @survey} %>
+  <%= render partial: "data_question_2",        locals: {partial_data: @survey} %>
+  <%= render partial: "data_question_3",        locals: {partial_data: @survey} %>
+  <%= render partial: "data_question_4",        locals: {partial_data: @survey} %>
+  <%= render partial: "data_question_5",        locals: {partial_data: @survey} %>
+
+	<fieldset class="my-fieldset">
+	  <legend class="my-fieldset"><%= t('.fieldset_title') %></legend>
+
+	  <div class="row">
+	    <div class="form-group col-sm-12">
+<!-- 
+	      <p><strong><%#= Survey.human_attribute_name(:note) %></strong></p>
+
+ -->	  <%= text_with_break_line(@survey.note) %>
+	    </div>
+	  </div> <!--/row -->
+	</fieldset>
+
+</div> <!--/container -->
+

@@ -34,6 +34,7 @@ class User < ApplicationRecord
   # relations
   has_and_belongs_to_many :roles
   belongs_to :department
+  has_many :surveys
   has_many :works, as: :trackable
 
   has_one_attached :photo
@@ -81,6 +82,10 @@ class User < ApplicationRecord
       ""
     end
     #link_to(self.name, url_helpers.user_path(self)).html_safe
+  end
+
+  def surveys_any
+    self.surveys.any? ? '<div style="text-align: center"><div class="glyphicon glyphicon-ok"></div></div>'.html_safe : ''
   end
 
   def user_link_add_remove(role, has_user)

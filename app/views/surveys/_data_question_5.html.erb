@@ -1,0 +1,23 @@
+<fieldset class="my-fieldset">
+  <legend class="my-fieldset"><%= t('.fieldset_title') %></legend>
+
+  <div class="row">
+    <div class="form-group col-sm-12">
+      <p>Ble ble ble 5</p>
+    </div>
+
+    <div class="form-group col-sm-12">
+      <p><strong><%= partial_data.class.human_attribute_name(:answer_5_place_1) %></strong>:&nbsp;
+      <%= Department.find(partial_data.answer_5_place_1).name unless partial_data.answer_5_place_1.blank? %></p>
+    </div>
+    <div class="form-group col-sm-12">
+      <p><strong><%= partial_data.class.human_attribute_name(:answer_5_place_2) %></strong>:&nbsp;
+      <%= Department.find(partial_data.answer_5_place_2).name unless partial_data.answer_5_place_2.blank? %></p>
+    </div>
+    <div class="form-group col-sm-12">
+      <p><strong><%= partial_data.class.human_attribute_name(:answer_5_place_3) %></strong>:&nbsp;
+      <%= Department.find(partial_data.answer_5_place_3).name unless partial_data.answer_5_place_3.blank? %></p>
+    </div>
+  </div> <!--/row -->
+</fieldset>
+

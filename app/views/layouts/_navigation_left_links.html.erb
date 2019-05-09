@@ -2,6 +2,16 @@
   <span class="fa fa-info-circle"></span>&nbsp;<%=t ".introduction" %>
   <% end %>
 </li>
+
+<% if user_signed_in? %>
+  <% if policy(:survey).index? %>
+		<li><%= link_to static_pages_introduction_path do %>
+		  <span class="fa fa-list-ol"></span>&nbsp;<%=t ".survey" %>
+		  <% end %>
+		</li>
+  <% end %>
+<% end %>
+
 <!-- 
 <li><%= link_to individuals_path do %>
   <span class="fa fa-user"></span>&nbsp;<%=t ".individuals" %>

@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
 
-
   devise_for :users, controllers: {
     confirmations: 'users/confirmations',
     passwords: 'users/passwords',
@@ -21,6 +20,10 @@ Rails.application.routes.draw do
     get 'datatables_index_user', on: :collection # Displays roles for showed user
     resources :users, only: [:create, :destroy], controller: 'roles/users'
   end    
+
+  resources :surveys do
+    get 'export', on: :collection
+  end
 
   resources :works, only: [:index] do
     post 'datatables_index', on: :collection # for User

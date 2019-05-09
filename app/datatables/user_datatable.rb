@@ -9,7 +9,8 @@ class UserDatatable < AjaxDatatablesRails::ActiveRecord
       current_sign_in_at:   { source: "User.current_sign_in_at",  cond: :like, searchable: true, orderable: true },
       last_activity_at:     { source: "User.last_activity_at",  cond: :like, searchable: true, orderable: true },
       password_changed_at:  { source: "User.password_changed_at",  cond: :like, searchable: true, orderable: true },
-      deleted_at:           { source: "User.deleted_at",  cond: :like, searchable: true, orderable: true }
+      deleted_at:           { source: "User.deleted_at",  cond: :like, searchable: true, orderable: true },
+      surveys_any:          { source: "User.id",  cond: :like, searchable: true, orderable: true }
     }
   end
 
@@ -23,7 +24,8 @@ class UserDatatable < AjaxDatatablesRails::ActiveRecord
         current_sign_in_at:   record.current_sign_in_at.present? ? record.current_sign_in_at.strftime("%Y-%m-%d %H:%M:%S") : '' ,
         last_activity_at:     record.last_activity_at.present? ? record.last_activity_at.strftime("%Y-%m-%d %H:%M:%S") : '' ,
         password_changed_at:  record.password_changed_at.present? ? record.password_changed_at.strftime("%Y-%m-%d %H:%M:%S") : '' ,
-        deleted_at:           record.deleted_at.present? ? record.deleted_at.strftime("%Y-%m-%d %H:%M:%S") : '' 
+        deleted_at:           record.deleted_at.present? ? record.deleted_at.strftime("%Y-%m-%d %H:%M:%S") : '',
+        surveys_any:          record.surveys_any
       }
     end
   end

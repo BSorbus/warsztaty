@@ -17,10 +17,12 @@ pl:
       introduction: 'Wprowadzenie'
       individuals: 'Osoby'
       clubs: 'Kluby'
+      survey: 'Ankieta'
     navigation_right_links:
       management: 'Zarządzanie'
       users: 'Użytkownicy'
       roles: 'Role'
+      surveys: 'Ankiety'
       works: 'Dziennik operacji'
   static_pages:
     home:
@@ -29,6 +31,7 @@ pl:
       title: 'Wprowadzenie i agenda'
       navbar: 'Wprowadzenie'
       schedule: 'Harmonogram'
+      place: 'Miejsce'
   individuals:
     index:
       title: 'Wykaz pozwoleń wydanych osobom fizycznym'
@@ -56,6 +59,22 @@ pl:
       title: 'Dziennik działań'
     works_in_panel:
       title: 'Dziennik działań'
+  surveys:
+    index:
+      title: 'Ankiety'
+    show:
+      title: 'Ankieta'
+      fieldset_title: 'Uwagi dotyczące szkolenia/warsztatów'
+    data_question_1:
+      fieldset_title: 'Pytanie 1'
+    data_question_2:
+      fieldset_title: 'Pytanie 2'
+    data_question_3:
+      fieldset_title: 'Pytanie 3'
+    data_question_4:
+      fieldset_title: 'Pytanie 4'
+    data_question_5:
+      fieldset_title: 'Pytanie 5'
   shared:
     basic_info:
       fieldset_title: 'Dane podstawowe'
@@ -97,6 +116,7 @@ pl:
       club: 'Klub'
       user: 'Użytkownik'
       role: 'Rola'
+      survey: 'Ankieta'
       work: 'Dziennik działań'
     attributes:
       individual:
@@ -163,10 +183,32 @@ pl:
         department: 'Oddział'
         department_id: 'Oddział'
         position: 'Stanowisko'
+        surveys_any: 'Wypełnił ankietę?'
       role:
         name: 'Nazwa'
         activities: 'Uprawnienia'
         note: 'Uwagi'
+      survey:
+        answer_1_place_1: 'Miejsce 1'
+        answer_1_place_2: 'Miejsce 2'
+        answer_1_place_3: 'Miejsce 3'
+        answer_2_place_1: 'Miejsce 1'
+        answer_2_place_2: 'Miejsce 2'
+        answer_2_place_3: 'Miejsce 3'
+        answer_3_place_1: 'Miejsce 1'
+        answer_3_place_2: 'Miejsce 2'
+        answer_3_place_3: 'Miejsce 3'
+        answer_4_place_1: 'Miejsce 1'
+        answer_4_place_2: 'Miejsce 2'
+        answer_4_place_3: 'Miejsce 3'
+        answer_5_place_1: 'Miejsce 1'
+        answer_5_place_2: 'Miejsce 2'
+        answer_5_place_3: 'Miejsce 3'
+        note: 'Uwagi do szkolenia'
+        user: 'Wypełnił'
+        user_id: 'Wypełnił'
+        created_at: 'Uworzono'
+        updated_at: 'Aktualizowano'
       work:
         created_at: 'Data'
         created_by: 'Autor'

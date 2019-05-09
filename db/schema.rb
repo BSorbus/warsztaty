@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_07_172138) do
+ActiveRecord::Schema.define(version: 2019_05_08_114031) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -141,6 +141,29 @@ ActiveRecord::Schema.define(version: 2019_05_07_172138) do
     t.index ["user_id"], name: "index_roles_users_on_user_id"
   end
 
+  create_table "surveys", force: :cascade do |t|
+    t.integer "answer_1_place_1"
+    t.integer "answer_1_place_2"
+    t.integer "answer_1_place_3"
+    t.integer "answer_2_place_1"
+    t.integer "answer_2_place_2"
+    t.integer "answer_2_place_3"
+    t.integer "answer_3_place_1"
+    t.integer "answer_3_place_2"
+    t.integer "answer_3_place_3"
+    t.integer "answer_4_place_1"
+    t.integer "answer_4_place_2"
+    t.integer "answer_4_place_3"
+    t.integer "answer_5_place_1"
+    t.integer "answer_5_place_2"
+    t.integer "answer_5_place_3"
+    t.text "note", default: ""
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_surveys_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "name", default: "", null: false
@@ -191,5 +214,6 @@ ActiveRecord::Schema.define(version: 2019_05_07_172138) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "roles_users", "roles"
   add_foreign_key "roles_users", "users"
+  add_foreign_key "surveys", "users"
   add_foreign_key "users", "departments"
 end
