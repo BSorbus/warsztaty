@@ -4,8 +4,8 @@
 </li>
 
 <% if user_signed_in? %>
-  <% if policy(:survey).index? %>
-		<li><%= link_to surveys_path do %>
+  <% if policy(:survey).new_self? %>
+		<li><%= link_to new_survey_path do %>
 		  <span class="fa fa-list-ol"></span>&nbsp;<%=t ".survey" %>
 		  <% end %>
 		</li>

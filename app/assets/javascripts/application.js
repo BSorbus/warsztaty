@@ -14,4 +14,9 @@
 //= require jquery_ujs
 //= require bootstrap-sprockets
 //= require bootstrap
+//= require highcharts
+//= require chartkick
 //= require_tree .
+
+//= stub "highmaps_regions_csv"
+//= stub "highmaps_regions_xml"

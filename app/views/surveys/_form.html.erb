@@ -1,27 +1,39 @@
-<%= form_with(model: survey, local: true) do |form| %>
-  <% if survey.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(survey.errors.count, "error") %> prohibited this survey from being saved:</h2>
+<div class="col-sm-11">
+  <%= form_with(model: survey, local: true) do |f| %>
 
-      <ul>
-      <% survey.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
+    <% input_disabled ||= false  
+       #if input_disabled is not passed to the partial it doesn't crash. 
+       # We default it to false 
+    %>
+
+    <%= form_errors_for survey %>
+
+    <%= render 'form_question_1', f: f, survey: survey, input_disabled: input_disabled %>
+    <%= render 'form_question_2', f: f, survey: survey, input_disabled: input_disabled %>
+    <%= render 'form_question_3', f: f, survey: survey, input_disabled: input_disabled %>
+    <%= render 'form_question_4', f: f, survey: survey, input_disabled: input_disabled %>
+    <%= render 'form_question_5', f: f, survey: survey, input_disabled: input_disabled %>
+    <%= render 'form_note',       f: f, survey: survey, input_disabled: input_disabled %>
+
+
+    <hr class="hr-without-top-margin">
+
+    <% if input_disabled %>
+      <!-- for "Show" -->
+    <% else %>
+      <!-- form "New"/"Edit" -->
+      <div class="row">
+
+        <%= link_to :back, class: "btn btn-default" do %>
+          <span class="glyphicon glyphicon-arrow-left"></span>
+          <%= t("helpers.links.back") %>
+        <% end %>
+
+        <%= f.submit nil, :class => 'btn btn-primary' %>
+      </div> <!-- /row -->
+    <% end %>
+    
   <% end %>
 
-  <div class="field">
-    <%= form.label :answer_1_place_1 %>
-    <%= form.number_field :answer_1_place_1 %>
-  </div>
+</div> <!--/col-sm-11-->
 
-  <div class="field">
-    <%= form.label :answer_1_place_2 %>
-    <%= form.number_field :answer_1_place_2 %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>

@@ -10,7 +10,7 @@ class UserDatatable < AjaxDatatablesRails::ActiveRecord
       last_activity_at:     { source: "User.last_activity_at",  cond: :like, searchable: true, orderable: true },
       password_changed_at:  { source: "User.password_changed_at",  cond: :like, searchable: true, orderable: true },
       deleted_at:           { source: "User.deleted_at",  cond: :like, searchable: true, orderable: true },
-      surveys_any:          { source: "User.id",  cond: :like, searchable: true, orderable: true }
+      surveys_any:          { source: "User.id" }
     }
   end
 

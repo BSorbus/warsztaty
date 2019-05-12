@@ -1,0 +1,6 @@
+<fieldset class="my-fieldset">
+  <legend class="my-fieldset"><%= t('surveys.note.fieldset_title') %></legend>
+    <div class="form-group col-sm-12">
+      <%= f.text_area :note, :rows => 4, :cols => 50, class: 'form-control input-sm', disabled: input_disabled %>
+    </div>
+</fieldset>

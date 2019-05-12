@@ -8,24 +8,32 @@
     </div> <!--/col-sm-12 -->
   </div> <!--/row -->
 
-  <%= render partial: "data_question_1",        locals: {partial_data: @survey} %>
-  <%= render partial: "data_question_2",        locals: {partial_data: @survey} %>
-  <%= render partial: "data_question_3",        locals: {partial_data: @survey} %>
-  <%= render partial: "data_question_4",        locals: {partial_data: @survey} %>
-  <%= render partial: "data_question_5",        locals: {partial_data: @survey} %>
+  <%= render partial: "data_question_1", locals: {partial_data: @survey} %>
+  <%= render partial: "data_question_2", locals: {partial_data: @survey} %>
+  <%= render partial: "data_question_3", locals: {partial_data: @survey} %>
+  <%= render partial: "data_question_4", locals: {partial_data: @survey} %>
+  <%= render partial: "data_question_5", locals: {partial_data: @survey} %>
+  <%= render partial: "data_note",       locals: {partial_data: @survey} %>
 
-	<fieldset class="my-fieldset">
-	  <legend class="my-fieldset"><%= t('.fieldset_title') %></legend>
+  <%= render partial: "data_charts" %>
 
-	  <div class="row">
-	    <div class="form-group col-sm-12">
-<!-- 
-	      <p><strong><%#= Survey.human_attribute_name(:note) %></strong></p>
+  <div class="row">
+    <div class="col-sm-12">
 
- -->	  <%= text_with_break_line(@survey.note) %>
-	    </div>
-	  </div> <!--/row -->
-	</fieldset>
+      <%= link_to root_path, class: "btn btn-default" do %>
+        <span class="glyphicon glyphicon-arrow-left"></span>
+        <%= t("helpers.links.back") %>
+      <% end %>
+
+      <% if policy(@survey).edit_self? %>
+        <%= link_to edit_survey_path(@survey), class: "btn btn-primary" do %>
+          <span class="glyphicon glyphicon-edit"></span>
+          <%= t("helpers.links.edit") %>
+        <% end %>
+      <% end %>
+
+    </div> <!--/col-sm-12 -->
+  </div> <!-- /row -->
 
 </div> <!--/container -->
 

@@ -39,6 +39,17 @@ Rails.application.routes.draw do
     get 'export', on: :collection
   end
 
+
+  resources :charts, only: [] do
+    get 'departments_by_question_pie', on: :collection
+    get 'departments_by_question_column', on: :collection
+    get 'departments_sum_pie', on: :collection
+    get 'departments_sum_column', on: :collection
+    get 'point_files', on: :collection
+    get 'xml_miejsce_realizacji_tables', on: :collection
+  end
+
+
   get 'datatables/lang'
 
   get 'static_pages/home'

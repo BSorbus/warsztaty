@@ -72,17 +72,23 @@ pl:
       title: 'Edyja Ankiety'
     show:
       title: 'Ankieta'
+    note:
       fieldset_title: 'Uwagi dotyczące szkolenia/warsztatów'
-    data_question_1:
+    question_1:
       fieldset_title: 'Pytanie 1'
-    data_question_2:
+      body: 'Najlepiej zorganizowana ekipa Ruchoma Stacja Pomiarowa (RSP)'
+    question_2:
       fieldset_title: 'Pytanie 2'
-    data_question_3:
+      body: 'Najaktywniejsza ekipa Ruchoma Stacja Pomiarowa (RSP)'
+    question_3:
       fieldset_title: 'Pytanie 3'
-    data_question_4:
+      body: 'Najbardziej merytoryczna ekipa Ruchoma Stacja Pomiarowa (RSP)'
+    question_4:
       fieldset_title: 'Pytanie 4'
-    data_question_5:
+      body: 'Najbardziej zadbana i czysta Ruchoma Stacja Pomiarowa (RSP)'
+    question_5:
       fieldset_title: 'Pytanie 5'
+      body: 'Ble ble ble 5'
   shared:
     basic_info:
       fieldset_title: 'Dane podstawowe'

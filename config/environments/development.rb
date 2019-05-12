@@ -89,4 +89,9 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
   # Send email in development mode?
   config.action_mailer.perform_deliveries = true
+
+
+  # config.default_url_options = { host: Rails.application.secrets.domain_name }
+  #Rails.application.routes.default_url_options[:host] = 'localhost:3000'
+  Rails.application.routes.default_url_options = { host: Rails.application.secrets.domain_name }
 end

@@ -1,6 +1,6 @@
 class SurveysController < ApplicationController
   before_action :authenticate_user!
-  after_action :verify_authorized, except: [:index, :datatables_index_user]
+  after_action :verify_authorized, except: [:new, :index, :datatables_index_user]
   before_action :set_survey, only: [:show, :edit, :update, :destroy]
 
 
@@ -26,18 +26,26 @@ class SurveysController < ApplicationController
   # GET /surveys/1
   # GET /surveys/1.json
   def show
-    authorize @survey, :show?
+    authorize @survey, :show_self?
   end
 
   # GET /surveys/new
   def new
-    @survey = Survey.new
-    authorize @survey, :new?
+    if current_user.surveys.any?
+      redirect_to survey_path(current_user.surveys.first.id) 
+    else
+      @survey = Survey.new
+      @survey.user_id = current_user.id
+      authorize @survey, :new_self?
+      respond_to do |format|
+        format.html { render :new }
+      end
+    end
   end
 
   # GET /surveys/1/edit
   def edit
-    authorize @survey, :edit?
+    authorize @survey, :edit_self?
   end
 
   # POST /surveys
@@ -45,7 +53,8 @@ class SurveysController < ApplicationController
   def create
     # @survey = Survey.new(name: params[:survey][:name], note: params[:survey][:note], special: params[:survey][:special],activities: params[:survey][:activities].split)
     @survey = Survey.new(survey_params)
-    authorize @survey, :create?
+    @survey.user_id = current_user.id
+    authorize @survey, :create_self?
     respond_to do |format|
       if @survey.save
         flash[:success] = t('activerecord.successfull.messages.created', data: @survey.fullname)
@@ -62,7 +71,7 @@ class SurveysController < ApplicationController
   # PATCH/PUT /surveys/1
   # PATCH/PUT /surveys/1.json
   def update
-    authorize @survey, :update?
+    authorize @survey, :update_self?
     respond_to do |format|
       # if @survey.update(name: params[:survey][:name], note: params[:survey][:note], special: params[:survey][:special],activities: params[:survey][:activities].split)
       if @survey.update(survey_params)
@@ -86,7 +95,7 @@ class SurveysController < ApplicationController
     #   format.html { redirect_to surveys_url }
     #   format.json { head :no_content }
     # end
-    authorize @survey, :destroy?
+    authorize @survey, :destroy_self?
     if @survey.destroy
       flash[:success] = t('activerecord.successfull.messages.destroyed', data: @survey.fullname)
       redirect_to surveys_url

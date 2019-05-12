@@ -82,3 +82,7 @@ gem 'mina'
 
 gem 'inky-rb', require: 'inky'
 gem 'premailer-rails'
+
+gem 'chartkick'
+
+gem 'mini_magick'

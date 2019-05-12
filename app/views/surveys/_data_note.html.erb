@@ -1,0 +1,12 @@
+<fieldset class="my-fieldset">
+  <legend class="my-fieldset"><%= t('surveys.note.fieldset_title') %></legend>
+
+  <div class="row">
+    <div class="form-group col-sm-12">
+<!-- 
+      <p><strong><%#= Survey.human_attribute_name(:note) %></strong></p>
+
+-->    <%= text_with_break_line(@survey.note) %>
+    </div>
+  </div> <!--/row -->
+</fieldset>
