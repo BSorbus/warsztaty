@@ -5,8 +5,15 @@ class UsersController < ApplicationController
 
 
   def export
+    authorize :user, :index?
+    @data = User.where.not(department_id: [1]).order(:name).all
+    respond_to do |format|
+      format.csv { send_data @data.to_csv, filename: "warsztay_rsp_users_#{Time.zone.today.strftime("%Y-%m-%d")}.csv" }
+    end
   end
 
+  # GET /users
+  # GET /users.json
   def index
     authorize :user, :index?
     respond_to do |format|

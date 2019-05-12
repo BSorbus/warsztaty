@@ -1,3 +1,4 @@
+require 'csv'
 class Survey < ApplicationRecord
   delegate :url_helpers, to: 'Rails.application.routes'
 
@@ -33,6 +34,19 @@ class Survey < ApplicationRecord
     worker_id = action_user_id
     Work.create!(trackable_type: 'Survey', trackable_id: self.id, trackable_url: trackable_url, action: "#{action}", user_id: worker_id, 
       parameters: self.to_json(except: [:user_id], include: {user: {only: [:id, :name, :email]}}))
+  end
+
+  def self.to_csv
+    CSV.generate(headers: false, col_sep: ';', converters: nil, skip_blanks: false, force_quotes: false) do |csv|
+      columns_header = %w(Wypełnił Delegatura Utworzono Aktualizowano)
+      csv << columns_header
+      all.each do |rec|
+        csv << [rec.user.fullname,
+                rec.user.department.short,
+                rec.created_at.strftime('%Y-%m-%d %H:%M:%S'),
+                rec.updated_at.strftime('%Y-%m-%d %H:%M:%S')]
+     end
+    end.encode('WINDOWS-1250')
   end
 
   def fullname

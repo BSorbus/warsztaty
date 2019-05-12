@@ -5,6 +5,11 @@ class SurveysController < ApplicationController
 
 
   def export
+    authorize :survey, :index?
+    @data = Survey.joins(:user).merge(User.order(:name)).all
+    respond_to do |format|
+      format.csv { send_data @data.to_csv, filename: "warsztay_rsp_surveys_#{Time.zone.today.strftime("%Y-%m-%d")}.csv" }
+    end
   end
 
   # GET /surveys

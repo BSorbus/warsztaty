@@ -1,3 +1,4 @@
+require 'csv'
 class User < ApplicationRecord
   include ActionView::Helpers::UrlHelper # for link_to
   include ActionView::Helpers::AssetTagHelper # for image_tag
@@ -41,6 +42,9 @@ class User < ApplicationRecord
 
   validate :password_complexity
 
+  # callbacks
+  before_destroy :has_important_links, prepend: true
+
   def log_work(action = '', action_user_id = nil)
     trackable_url = (action == 'destroy') ? nil : "#{url_helpers.user_path(self)}"
     worker_id = action_user_id
@@ -55,9 +59,6 @@ class User < ApplicationRecord
     end
   end
 
-  # callbacks
-  before_destroy :has_important_links, prepend: true
-
   def has_important_links
     analize_value = true
     # if self.accessorizations.any? 
@@ -65,6 +66,18 @@ class User < ApplicationRecord
     #  analize_value = false
     # end
     # throw :abort unless analize_value 
+  end
+
+  def self.to_csv
+    CSV.generate(headers: false, col_sep: ';', converters: nil, skip_blanks: false, force_quotes: false) do |csv|
+      columns_header = %w(Nazwa Email Delegatura)
+      csv << columns_header
+      all.each do |rec|
+        csv << [rec.name.strip,
+                rec.email,
+                rec.department.present? ? rec.department.short : ""]
+     end
+    end.encode('WINDOWS-1250')
   end
 
   def fullname
@@ -84,15 +97,6 @@ class User < ApplicationRecord
 
     #link_to "#{self.name}", "#{url_helpers.user_path(self)}"
     # "<a href=#{url_helpers.user_path(self)}>#{self.name}</a>".html_safe
-  end
-
-  def photo_link
-    if self.photo.attached?
-      link_to(image_tag(self.photo.variant(resize: "100x100")), url_helpers.user_path(self)).html_safe 
-    else
-      ""
-    end
-    #link_to(self.name, url_helpers.user_path(self)).html_safe
   end
 
   def surveys_any
