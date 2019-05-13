@@ -46,6 +46,10 @@ pl:
       title: 'Zadanie 3'
     job_4:
       title: 'Zadanie 4'
+    jobs:
+      carousel:
+        navbar: 'Zadania'
+        title: 'Zadania szkoleniowe RSP'
   individuals:
     index:
       title: 'Wykaz pozwoleń wydanych osobom fizycznym'

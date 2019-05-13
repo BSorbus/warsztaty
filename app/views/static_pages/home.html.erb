@@ -19,6 +19,7 @@
           <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
           <li data-target="#carousel-example-generic" data-slide-to="1"></li>
           <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="3"></li>
         </ol>
 
         <!-- Wrapper for slides -->
@@ -40,7 +41,16 @@
             </div>
           </div>
           <div class="item">
-            <%= image_tag("02.jpg") %>
+            <%= image_tag("02.png") %>
+            <div class="carousel-caption">
+              <%= link_to static_pages_job_1_path do %>
+                <span class="btn btn-primary"><%= t("static_pages.jobs.carousel.navbar") %></span>
+              <% end %>
+              <h4><%= t("static_pages.jobs.carousel.title") %></h4>
+            </div>
+          </div>
+          <div class="item">
+            <%= image_tag("03.jpg") %>
             <div class="carousel-caption">
               <%= link_to new_survey_path do %>
                 <span class="btn btn-primary"><%= t("surveys.carousel.navbar") %></span>
