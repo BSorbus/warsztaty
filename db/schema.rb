@@ -36,55 +36,6 @@ ActiveRecord::Schema.define(version: 2019_05_08_114031) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "clubs", force: :cascade do |t|
-    t.string "number", default: ""
-    t.date "date_of_issue"
-    t.date "valid_to"
-    t.string "call_sign", default: ""
-    t.string "category", default: ""
-    t.integer "transmitter_power"
-    t.string "enduser_name", default: ""
-    t.string "enduser_city", default: ""
-    t.string "enduser_street", default: ""
-    t.string "enduser_house", default: ""
-    t.string "enduser_number", default: ""
-    t.string "applicant_name", default: ""
-    t.string "applicant_city", default: ""
-    t.string "applicant_street", default: ""
-    t.string "applicant_house", default: ""
-    t.string "applicant_number", default: ""
-    t.string "station_city", default: ""
-    t.string "station_street", default: ""
-    t.string "station_house", default: ""
-    t.string "station_number", default: ""
-    t.float "lat"
-    t.float "lng"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["applicant_city"], name: "index_clubs_on_applicant_city"
-    t.index ["applicant_house"], name: "index_clubs_on_applicant_house"
-    t.index ["applicant_name"], name: "index_clubs_on_applicant_name"
-    t.index ["applicant_number"], name: "index_clubs_on_applicant_number"
-    t.index ["applicant_street"], name: "index_clubs_on_applicant_street"
-    t.index ["call_sign"], name: "index_clubs_on_call_sign"
-    t.index ["category"], name: "index_clubs_on_category"
-    t.index ["date_of_issue"], name: "index_clubs_on_date_of_issue"
-    t.index ["enduser_city"], name: "index_clubs_on_enduser_city"
-    t.index ["enduser_house"], name: "index_clubs_on_enduser_house"
-    t.index ["enduser_name"], name: "index_clubs_on_enduser_name"
-    t.index ["enduser_number"], name: "index_clubs_on_enduser_number"
-    t.index ["enduser_street"], name: "index_clubs_on_enduser_street"
-    t.index ["lat"], name: "index_clubs_on_lat"
-    t.index ["lng"], name: "index_clubs_on_lng"
-    t.index ["number"], name: "index_clubs_on_number"
-    t.index ["station_city"], name: "index_clubs_on_station_city"
-    t.index ["station_house"], name: "index_clubs_on_station_house"
-    t.index ["station_number"], name: "index_clubs_on_station_number"
-    t.index ["station_street"], name: "index_clubs_on_station_street"
-    t.index ["transmitter_power"], name: "index_clubs_on_transmitter_power"
-    t.index ["valid_to"], name: "index_clubs_on_valid_to"
-  end
-
   create_table "departments", force: :cascade do |t|
     t.string "short", limit: 15, default: "", null: false
     t.string "name", limit: 100, default: "", null: false
@@ -92,25 +43,6 @@ ActiveRecord::Schema.define(version: 2019_05_08_114031) do
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_departments_on_name", unique: true
     t.index ["short"], name: "index_departments_on_short", unique: true
-  end
-
-  create_table "individuals", force: :cascade do |t|
-    t.string "number", default: ""
-    t.date "date_of_issue"
-    t.date "valid_to"
-    t.string "call_sign", default: ""
-    t.string "category", default: ""
-    t.integer "transmitter_power"
-    t.string "station_location", default: ""
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["call_sign"], name: "index_individuals_on_call_sign"
-    t.index ["category"], name: "index_individuals_on_category"
-    t.index ["date_of_issue"], name: "index_individuals_on_date_of_issue"
-    t.index ["number"], name: "index_individuals_on_number"
-    t.index ["station_location"], name: "index_individuals_on_station_location"
-    t.index ["transmitter_power"], name: "index_individuals_on_transmitter_power"
-    t.index ["valid_to"], name: "index_individuals_on_valid_to"
   end
 
   create_table "old_passwords", force: :cascade do |t|
@@ -154,9 +86,6 @@ ActiveRecord::Schema.define(version: 2019_05_08_114031) do
     t.integer "answer_4_place_1"
     t.integer "answer_4_place_2"
     t.integer "answer_4_place_3"
-    t.integer "answer_5_place_1"
-    t.integer "answer_5_place_2"
-    t.integer "answer_5_place_3"
     t.text "note", default: ""
     t.bigint "user_id"
     t.datetime "created_at", null: false

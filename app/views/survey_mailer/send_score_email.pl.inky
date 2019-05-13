@@ -1,0 +1,77 @@
+<spacer size="16"></spacer>
+<container>
+  <row>
+    <columns large="4">
+      <spacer size="16"></spacer>
+      <center>
+        <%=link_to( image_tag( attachments['logo.jpg'].url, alt: "UKE" ), root_url, target: "_blank" ) %>
+      </center>
+    </columns>
+    <columns large="8">
+      <spacer size="16"></spacer>
+
+    </columns>
+  </row>
+
+  <spacer size="16"></spacer>
+
+  <row>
+    <columns>
+      <h4>Witaj!</h4>
+      <p>Uprzejmie informujemy, że w czasie trwania <strong>Warsztatów Pomiarowych RSP – Supraśl 2019</strong> Naczelnicy Wydziałów wypełnili krótką ankietę w następujących kategoriach:</p>
+      <p>1. Najlepiej zorganizowana ekipa RSP</p>
+      <p>2. Najaktywniejsza ekipa RSP</p>
+      <p>3. Najbardziej merytoryczna ekipa RSP</p>
+      <p>4. Najbardziej zadbana i czysta RSP</p>
+      <p>Łącznie najwyższą punktację otrzymał(-y) Zespół(-oły) <strong><%= @star_departments_shorts.join(', ') %></strong> z <strong><%= @star_departments_names.join(', ') %></strong> i tym samym uzyskał(-y) wyróżnienie:<p>
+      <spacer size="8"></spacer>
+      <h3>
+        <center>Ekipa RSP na MEDAL</center>
+      <h3>
+    </columns>
+  </row>
+
+  <row>
+    <columns large="4">
+    </columns>
+    <columns large="4">
+      <center><%= image_tag( attachments['puchar.jpg'].url, alt: "Puchar" ) %></center>
+    </columns>
+    <columns large="4">
+    </columns>
+  </row>
+
+  <spacer size="4"></spacer>
+
+  <row>
+    <columns>
+      <button href=<%= new_survey_url %> class="large expanded success">Zobacz wyniki i wykresy</button>
+    </columns>
+  </row>
+
+
+  <spacer size="16"></spacer>
+
+  <row class="collapsed footer">
+    <columns>
+      <hr class="hr-brand">
+      <row>
+        <columns large="4">
+          <spacer size="8"></spacer>
+          <center>
+              <%= image_tag( attachments['logo_uke.jpg'].url, alt: "UKE" ) %>
+          </center>
+          <spacer size="16"></spacer>
+          <p class="text-left"><small>&copy; 2019 UKE-BI<small></small></p>
+        </columns>
+        <columns large="8">
+          <spacer size="8"></spacer>
+          <h6 class="text-right h6-small"><%= mail_to "marcin.wozniak@uke.gov.pl" %></h6>
+          <h6 class="text-right h6-small"><%= mail_to "warsztaty@uke.gov.pl" %></h6>
+        </columns>
+
+      </row>
+    </columns>
+  </row>
+
+</container>

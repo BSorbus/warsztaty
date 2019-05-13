@@ -12,6 +12,14 @@ class SurveysController < ApplicationController
     end
   end
 
+  # GET /surveys/send_score
+  def send_score
+    authorize :survey, :index?
+    SurveyMailer.send_score_email.deliver_now
+    flash[:success] = "Wyniki zostały wysłane na pocztę użytkowników."
+    redirect_to surveys_url
+  end
+
   # GET /surveys
   # GET /surveys.json
   def index
@@ -122,7 +130,6 @@ class SurveysController < ApplicationController
       params.require(:survey).permit( :answer_1_place_1, :answer_1_place_2, :answer_1_place_3,
                                       :answer_2_place_1, :answer_2_place_2, :answer_2_place_3,
                                       :answer_3_place_1, :answer_3_place_2, :answer_3_place_3,
-                                      :answer_4_place_1, :answer_4_place_2, :answer_4_place_3,
-                                      :answer_5_place_1, :answer_5_place_2, :answer_5_place_3, :note, :user_id)
+                                      :answer_4_place_1, :answer_4_place_2, :answer_4_place_3, :note, :user_id)
     end
 end

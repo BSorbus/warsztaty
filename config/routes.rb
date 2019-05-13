@@ -23,6 +23,7 @@ Rails.application.routes.draw do
 
   resources :surveys do
     get 'export', on: :collection
+    get 'send_score', on: :collection 
   end
 
   resources :works, only: [:index] do
@@ -30,15 +31,6 @@ Rails.application.routes.draw do
     post 'datatables_index_trackable', on: :collection # for Trackable
     post 'datatables_index_user', on: :collection # for User
   end
-
-  resources :individuals, only: [:index, :show] do
-    get 'export', on: :collection
-  end
-
-  resources :clubs, only: [:index, :show] do
-    get 'export', on: :collection
-  end
-
 
   resources :charts, only: [] do
     get 'departments_by_question_pie', on: :collection

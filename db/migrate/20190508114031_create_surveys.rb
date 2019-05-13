@@ -17,10 +17,6 @@ class CreateSurveys < ActiveRecord::Migration[5.2]
       t.integer :answer_4_place_2
       t.integer :answer_4_place_3
 
-      t.integer :answer_5_place_1
-      t.integer :answer_5_place_2
-      t.integer :answer_5_place_3
-
       t.text :note, default: ""
       t.references :user, foreign_key: true
       t.timestamps
@@ -34,5 +30,4 @@ end
 # 2	Najaktywniejsza ekipa RSP	OBI, lub OBY lub OOL itd.
 # 3	Najbardziej merytoryczna ekipa RSP	OBI, lub OBY lub OOL itd.
 # 4	Najbardziej zadbana i czysta RSP	OBI, lub OBY lub OOL itd.
-# 5	Może jeszcze coś…	OBI, lub OBY lub OOL itd.
  

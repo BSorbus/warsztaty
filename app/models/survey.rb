@@ -18,15 +18,11 @@ class Survey < ApplicationRecord
   validates :answer_4_place_1, presence: true
   validates :answer_4_place_2, presence: true
   validates :answer_4_place_3, presence: true
-  validates :answer_5_place_1, presence: true
-  validates :answer_5_place_2, presence: true
-  validates :answer_5_place_3, presence: true
 
   validate :answer_1
   validate :answer_2
   validate :answer_3
   validate :answer_4
-  validate :answer_5
 
 
   def log_work(action = '', action_user_id = nil)
@@ -134,25 +130,5 @@ class Survey < ApplicationRecord
       end 
       throw :abort unless analize_value
     end
-
-    def answer_5
-      analize_value = true
-      return if answer_5_place_1.blank? || answer_5_place_2.blank? || answer_5_place_3.blank?
-     
-      if answer_5_place_1 == answer_5_place_2
-        errors.add(:answer_5_place_2, 'Pytanie 5 - Określona Delegatura może występić w wynikach poszczególnych pytań tylko raz') 
-        analize_value = false 
-      end 
-      if answer_5_place_1 == answer_5_place_3
-        errors.add(:answer_5_place_3, 'Pytanie 5 - Określona Delegatura może występić w wynikach poszczególnych pytań tylko raz') 
-        analize_value = false 
-      end 
-      if answer_5_place_2 == answer_5_place_3
-        errors.add(:answer_5_place_3, 'Pytanie 5 - Określona Delegatura może występić w wynikach poszczególnych pytań tylko raz') 
-        analize_value = false 
-      end 
-      throw :abort unless analize_value
-    end
-
 
 end

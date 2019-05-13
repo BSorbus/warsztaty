@@ -38,8 +38,7 @@ class ChartsController < ApplicationController
                       sum_answer(dep, "1") + 
                       sum_answer(dep, "2") + 
                       sum_answer(dep, "3") + 
-                      sum_answer(dep, "4") + 
-                      sum_answer(dep, "5") ]
+                      sum_answer(dep, "4") ] 
     end
     render json: data_array 
   end
@@ -64,8 +63,7 @@ class ChartsController < ApplicationController
                       data: {"Wszystkie pytania": sum_answer(department.id, "1") + 
                                                   sum_answer(department.id, "2") +
                                                   sum_answer(department.id, "3") +
-                                                  sum_answer(department.id, "4") +
-                                                  sum_answer(department.id, "5") }
+                                                  sum_answer(department.id, "4") }
                     }         
     end
     render json: data_array.to_json
@@ -89,10 +87,6 @@ class ChartsController < ApplicationController
       (Survey.where(answer_4_place_1: dep).count * 3) + 
       (Survey.where(answer_4_place_2: dep).count * 2) + 
       (Survey.where(answer_4_place_3: dep).count * 1) 
-    when 5
-      (Survey.where(answer_5_place_1: dep).count * 3) + 
-      (Survey.where(answer_5_place_2: dep).count * 2) + 
-      (Survey.where(answer_5_place_3: dep).count * 1) 
     end
 
   end

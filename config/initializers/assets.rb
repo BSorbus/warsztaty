@@ -14,5 +14,3 @@ Rails.application.config.assets.paths << Rails.root.join('node_modules')
 # Rails.application.config.assets.precompile += %w( admin.js admin.css )
 
 Rails.application.config.assets.precompile += %w( foundation_emails.scss )
-Rails.application.config.assets.precompile += %w( highmaps_regions_csv.js )
-Rails.application.config.assets.precompile += %w( highmaps_regions_xml.js )

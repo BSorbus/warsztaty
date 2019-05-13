@@ -20,8 +20,6 @@ pl:
       job_3: 'Zadanie 3'
       job_4: 'Zadanie 4'
       introduction: 'Wprowadzenie'
-      individuals: 'Osoby'
-      clubs: 'Kluby'
       survey: 'Ankieta'
     navigation_right_links:
       management: 'Zarządzanie'
@@ -51,16 +49,6 @@ pl:
       carousel:
         navbar: 'Zadania'
         title: 'Zadania szkoleniowe RSP'
-  individuals:
-    index:
-      title: 'Wykaz pozwoleń wydanych osobom fizycznym'
-    show:
-      title: 'Osoba'
-  clubs:
-    index:
-      title: 'Wykaz pozwoleń wydanych osobom prawnym'
-    show:
-      title: 'Klub'
   users:
     index:
       title: 'Użytkownicy'
@@ -104,22 +92,6 @@ pl:
     question_4:
       fieldset_title: 'Pytanie 4'
       body: 'Najbardziej zadbana i czysta Ruchoma Stacja Pomiarowa (RSP)'
-    question_5:
-      fieldset_title: 'Pytanie 5'
-      body: 'Ble ble ble 5'
-  shared:
-    basic_info:
-      fieldset_title: 'Dane podstawowe'
-    additional_info:
-      fieldset_title: 'Informacje dodatkowe'
-    station_info:
-      fieldset_title: 'Stacja'
-    station_full_info:
-      fieldset_title: 'Stacja'
-    applicant_info:
-      fieldset_title: 'Wnioskodawca'
-    enduser_info:
-      fieldset_title: 'Użytkownik'
   activerecord:
     errors:
       messages:
@@ -144,60 +116,11 @@ pl:
         account_off: 'Pomyślnie wyłączono konto "%{data}".'
         account_on: 'Pomyślnie włączono konto "%{data}".'
     models:
-      individual: 'Osoba'
-      club: 'Klub'
       user: 'Użytkownik'
       role: 'Rola'
       survey: 'Ankieta'
       work: 'Dziennik działań'
     attributes:
-      individual:
-        number: 'Numer'
-        date_of_issue: 'Data wydania'
-        valid_to: 'Ważne do'
-        call_sign: 'Znak'
-        category: 'Kategoria'
-        transmitter_power: 'Moc'
-        station_location: 'Stacja'
-      club:
-        number: 'Numer'
-        date_of_issue: 'Data wydania'
-        valid_to: 'Ważne do'
-        call_sign: 'Znak'
-        category: 'Kategoria'
-        transmitter_power: 'Moc'
-        enduser_name: 'Użytkownik - Nazwa'
-        enduser_name_short: 'Nazwa'
-        enduser_city: 'Użytkownik - Miejscowość'
-        enduser_city_short: 'Miejscowość'
-        enduser_street: 'Użytkownik - Ulica'
-        enduser_street_short: 'Ulica'
-        enduser_house: 'Użytkownik - Dom'
-        enduser_house_short: 'Dom'
-        enduser_number: 'Użytkownik - Lokal'
-        enduser_number_short: 'Lokal'
-        applicant: 'Wnioskodawca'
-        applicant_name: 'Wnioskodawca - Nazwa'
-        applicant_name_short: 'Nazwa'
-        applicant_city: 'Wnioskodawca - Miejscowość'
-        applicant_city_short: 'Miejscowość'
-        applicant_street: 'Wnioskodawca - Ulica'
-        applicant_street_short: 'Ulica'
-        applicant_house: 'Wnioskodawca - Dom'
-        applicant_house_short: 'Dom'
-        applicant_number: 'Wnioskodawca - Lokal'
-        applicant_number_short: 'Lokal'
-        station: 'Stacja'
-        station_city: 'Stacja - Miejscowość'
-        station_city_short: 'Miejscowość'
-        station_street: 'Stacja - Ulica'
-        station_street_short: 'Ulica'
-        station_house: 'Stacja - Dom'
-        station_house_short: 'Dom'
-        station_number: 'Stacja - Lokal'
-        station_number_short: 'Lokal'
-        lat: 'Stacja - latitude'
-        lng: 'Stacja - longitude'
       user:
         name: 'Imię i Nazwisko'
         email: 'Email'
@@ -233,9 +156,6 @@ pl:
         answer_4_place_1: 'Miejsce 1'
         answer_4_place_2: 'Miejsce 2'
         answer_4_place_3: 'Miejsce 3'
-        answer_5_place_1: 'Miejsce 1'
-        answer_5_place_2: 'Miejsce 2'
-        answer_5_place_3: 'Miejsce 3'
         note: 'Uwagi do szkolenia'
         user: 'Wypełnił'
         user_id: 'Wypełnił'
@@ -427,7 +347,7 @@ pl:
       confirm_send_email: 'Na pewno chcesz wysłać email do: "%{data}"?'
       destroy: " Usuń"
       destroy_account: "Usuń moje konto"
-      send_email: " Wyślij email"
+      send_email: " Wyślij na email wszystkich użytkowników wyniki ankiet"
       download: " Pobierz"
       download_xls: " Pobierz XLS"
       print: " Wydruk"

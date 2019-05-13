@@ -12,7 +12,6 @@
   <%= render partial: "data_question_2", locals: {partial_data: @survey} %>
   <%= render partial: "data_question_3", locals: {partial_data: @survey} %>
   <%= render partial: "data_question_4", locals: {partial_data: @survey} %>
-  <%= render partial: "data_question_5", locals: {partial_data: @survey} %>
   <%= render partial: "data_note",       locals: {partial_data: @survey} %>
 
   <div class="row">
@@ -24,7 +23,8 @@
       <% end %>
 
       <% if policy(@survey).edit_self? %>
-        <%= link_to edit_survey_path(@survey), class: "btn btn-primary" do %>
+        <% enabled_disabled = (Survey.all.count >= Role.find(5).users.count) ? "disabled" : "" %>
+        <%= link_to edit_survey_path(@survey), class: "btn btn-primary #{enabled_disabled}" do %>
           <span class="glyphicon glyphicon-edit"></span>
           <%= t("helpers.links.edit") %>
         <% end %>
@@ -33,7 +33,7 @@
     </div> <!--/col-sm-12 -->
   </div> <!-- /row -->
 
-  <% if Survey.all.count == Role.find(5).users.count %>
+  <% if Survey.all.count < Role.find(5).users.count %>
     <%= render partial: "data_charts" %>
   <% end %>
 
