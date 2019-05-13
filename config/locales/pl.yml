@@ -37,6 +37,7 @@ pl:
       title: 'Wprowadzenie i agenda'
       navbar: 'Wprowadzenie'
       schedule: 'Harmonogram'
+      remember: 'Pamiętaj o ...'
       place: 'Miejsca'
     job_1:
       title: 'Zadanie 1'

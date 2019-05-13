@@ -33,7 +33,9 @@
     </div> <!--/col-sm-12 -->
   </div> <!-- /row -->
 
-  <%= render partial: "data_charts" %>
+  <% if Survey.all.count == Role.find(5).users.count %>
+    <%= render partial: "data_charts" %>
+  <% end %>
 
 </div> <!--/container -->
 
