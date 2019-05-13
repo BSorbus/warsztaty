@@ -14,6 +14,11 @@ pl:
       links: 'Zobacz też'
     navigation_left_links:
       home: 'Warsztaty pomiarowe RSP'
+      jobs: 'Zadania'
+      job_1: 'Zadanie 1'
+      job_2: 'Zadanie 2'
+      job_3: 'Zadanie 3'
+      job_4: 'Zadanie 4'
       introduction: 'Wprowadzenie'
       individuals: 'Osoby'
       clubs: 'Kluby'
@@ -32,7 +37,15 @@ pl:
       title: 'Wprowadzenie i agenda'
       navbar: 'Wprowadzenie'
       schedule: 'Harmonogram'
-      place: 'Miejsce'
+      place: 'Miejsca'
+    job_1:
+      title: 'Zadanie 1'
+    job_2:
+      title: 'Zadanie 2'
+    job_3:
+      title: 'Zadanie 3'
+    job_4:
+      title: 'Zadanie 4'
   individuals:
     index:
       title: 'Wykaz pozwoleń wydanych osobom fizycznym'

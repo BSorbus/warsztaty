@@ -54,6 +54,11 @@ Rails.application.routes.draw do
 
   get 'static_pages/home'
   get 'static_pages/introduction'
+  get 'static_pages/job_1'
+  get 'static_pages/job_2'
+  get 'static_pages/job_3'
+  get 'static_pages/job_4'
+
   root to: 'static_pages#home'
 
 end

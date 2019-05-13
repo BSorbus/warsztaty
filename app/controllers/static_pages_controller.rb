@@ -8,5 +8,16 @@ class StaticPagesController < ApplicationController
   def introduction
   end
 
+  def job_1
+  end
+
+  def job_2
+  end
+
+  def job_3
+  end
+
+  def job_4
+  end
 
 end

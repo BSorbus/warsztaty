@@ -1,0 +1,145 @@
+<style type="text/css">  
+  th {
+    background-color: #BECC25 !important;
+  }
+</style>
+
+
+<div class="container">
+  
+  <div class="row">
+    <div class="col-sm-12">
+      <h1 class="center">
+        <span class="index-title"><%= t '.title' %></span>
+      </h1>
+    </div> <!--/col-sm-12 -->
+  </div> <!--/row -->
+
+  <br>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <h3 class="text-justify">
+        Lokalizacja źródła zakłóceń położonego za granicą RP wraz z przygotowaniem raportu
+      </h3> 
+    </div> <!--/col-sm-12 -->
+  </div> <!--/row -->
+
+  <div class="row">
+    <div class="col-sm-12">
+      <table class="table table-bordered" cellspacing="0" width="100%">
+        <tbody>
+          <tr>
+            <td><div class="col-xs-4">Data: <strong>22.05.2019r.</strong></div>
+                <div class="col-xs-4">Czas trwania: <strong>9:00 – 13:00 (4h)</strong></div>
+                <div class="col-xs-4">Koordynator: <strong>M. Woźniak</strong></div></td>
+          <tr>
+          <tr class="active">
+            <td><strong>I. Cel ćwiczenia</strong></td>
+          <tr>
+          <tr>
+            <td>Podniesienie kompetencji pracowników obsługujących Ruchome Stacje Pomiarowe w zakresie lokalizowania źródła zakłóceń położonego za granicą, ograniczonego brakiem możliwości dotarcia bezpośrednio do tego źródła oraz nabycie umiejętności opracowania Raportu - Zgłoszenia szkodliwych zakłóceń (zgodnego z Zał. 10 RR)</td>
+          <tr>
+          <tr class="active">
+            <td><strong>II. Miejsce ćwiczenia</strong></td>
+          <tr>
+          <tr>
+            <td>Obszar nadgraniczny z Białorusią na długości kilkudziesięciu kilometrów.<br>
+              <div id="idMap" style="width: 100%; height: 75vh;"></div></td>
+          <tr>
+          <tr class="active">
+            <td><strong>III. Niezbędne wyposażenie</strong></td>
+          <tr>
+          <tr>
+            <td>1. Ruchoma Stacja Pomiarowa</td>
+          <tr>
+          <tr>
+            <td>2. Przyrząd lub zestaw przyrządów do wykonania podstawowych pomiarów parametrów sygnału (częstotliwość, szerokość pasma, poziom natężenia pola)</td>
+          <tr>
+          <tr>
+            <td>3. Przyrząd lub zestaw przyrządów do wykonania namiarów dowolna techniką (namierzanie DF, namierzanie w ruchu namierzanie amplitudowe)</td>
+          <tr>
+          <tr>
+            <td>4. Podkład mapowy do prezentacji namiarów, lokalizacji</td>
+          <tr>
+          <tr>
+            <td>5. Skrypt – Instrukcje pomiarowe</td>
+          <tr>
+          <tr>
+            <td>6. Laptop lub inny komputer do opracowania raportu</td>
+          <tr>
+          <tr>
+            <td>7. Przygotowany wzór formularza raportu na pendrivie</td>
+          <tr>
+          <tr>
+            <td>8. Telefon komórkowy do łączności</td>
+          <tr>
+          <tr class="active">
+            <td><strong>IV. Przebieg ćwiczenia</strong></td>
+          <tr>
+          <tr>
+            <td><div class="col-xs-2">8:50 - 9:00</div><div class="col-xs-10">Losowanie zadań pomiarowych</div></td>
+          <tr>
+          <tr>
+            <td><div class="col-xs-2">9:00 - 11:45</div><div class="col-xs-10">1. Identyfikacja sygnału zakłócającego we wskazanej lokalizacji</div></td>
+          <tr>
+          <tr>
+            <td><div class="col-xs-2"></div><div class="col-xs-10">2. Znalezienie dogodnego miejsca do przeprowadzenia niezbędnych pomiarów</div></td>
+          <tr>
+          <tr>
+            <td><div class="col-xs-2"></div><div class="col-xs-10">3. Pomiar sygnału zakłócającego (poziom E, częstotliwość, szerokość pasma, rejestracja obwiedni widma)</div></td>
+          <tr>
+          <tr>
+            <td><div class="col-xs-2"></div><div class="col-xs-10">4. Przemieszczanie się w celu wykonania namiarów do precyzyjnego wskazania potencjalnej lokalizacji źródła zakłóceń (do zaprezentowania w raporcie)</div></td>
+          <tr>
+          <tr>
+            <td><div class="col-xs-2">11:45 - 12:30</div><div class="col-xs-10">Przygotowanie raportu (załącznik 10 RR) na pedrivach</div></td>
+          <tr>
+          <tr>
+            <td><div class="col-xs-2">12:30 - 13:00</div><div class="col-xs-10">Powrót do miejsca spożycia obiadu</div></td>
+          <tr>
+          <tr>
+            <td><div class="col-xs-2">13:00</div><div class="col-xs-10">Przekazanie pendriva z Raportem koordynatorowi</div></td>
+          <tr>
+        </tbody>
+
+      </table>
+    </div> <!--/col-sm-12 -->
+  </div> <!--/row -->
+
+
+</div> <!--/container -->
+
+ 
+<script src="https://www.openlayers.org/api/OpenLayers.js"></script>
+
+<script>
+  //var lat            = <%#= partial_data.lat %>;
+  //var lon            = <%#= partial_data.lng %>;
+  var lat            = 53.2065016;
+  var lon            = 23.8555551;
+
+  var zoom           = 12;
+  var size = new OpenLayers.Size(36,36);
+  var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
+  var icon = new OpenLayers.Icon("<%= asset_path('marker.png', locale: locale) %>", size, offset);
+
+
+  var fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
+  var toProjection   = new OpenLayers.Projection("EPSG:900913"); // to Spherical Mercator Projection
+  var position       = new OpenLayers.LonLat(lon, lat).transform( fromProjection, toProjection);
+
+
+  map = new OpenLayers.Map("idMap");
+
+  var mapnik         = new OpenLayers.Layer.OSM();
+  map.addLayer(mapnik);
+
+  var markers = new OpenLayers.Layer.Markers( "Markers" );
+
+  map.addLayer(markers);
+  markers.addMarker(new OpenLayers.Marker(position, icon));
+
+  map.setCenter(position, zoom);
+</script>
+
