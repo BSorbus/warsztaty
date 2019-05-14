@@ -36,7 +36,7 @@ pl:
       title: 'Wprowadzenie i agenda'
       navbar: 'Wprowadzenie'
       schedule: 'Harmonogram'
-      remember: 'Pamiętaj o ...'
+      remember: 'Nie zapomnij'
       place: 'Miejsca'
     job_1:
       title: 'Zadanie 1'
@@ -72,7 +72,7 @@ pl:
   surveys:
     carousel:
       navbar: 'Ankieta'
-      title: 'Wypełnienie ankiety i przeglądanie wyników wymaga zalogowania'
+      title: "Wypełnienie ankiety"
     index:
       title: 'Ankiety'
     new:

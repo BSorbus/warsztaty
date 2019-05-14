@@ -69,7 +69,7 @@
             <td>6. Laptop lub inny komputer do opracowania raportu</td>
           </tr>
           <tr>
-            <td>7. Przygotowany wzór formularza raportu na pendrivie</td>
+            <td>7. Przygotowany wzór formularza raportu na pendrivie (dostarczy Organizator)</td>
           </tr>
           <tr>
             <td>8. Telefon komórkowy do łączności</td>
@@ -122,15 +122,35 @@
   var lat            = 53.2065016;
   var lon            = 23.8555551;
 
-  var zoom           = 14;
+  var lat1            = 53.356944;
+  var lon1            = 23.705833;
+
+  var lat2            = 53.281944;
+  var lon2            = 23.764444;
+
+  var lat3            = 53.197778;
+  var lon3            = 23.801389;
+
+  var lat4            = 53.208889;
+  var lon4            = 23.853333;
+
+  var zoom           = 10;
   var size = new OpenLayers.Size(36,36);
   var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
   var icon = new OpenLayers.Icon("<%= asset_path('marker.png', locale: locale) %>", size, offset);
+  var icon1 = new OpenLayers.Icon("<%= asset_path('marker.png', locale: locale) %>", size, offset);
+  var icon2 = new OpenLayers.Icon("<%= asset_path('marker.png', locale: locale) %>", size, offset);
+  var icon3 = new OpenLayers.Icon("<%= asset_path('marker.png', locale: locale) %>", size, offset);
+  var icon4 = new OpenLayers.Icon("<%= asset_path('marker.png', locale: locale) %>", size, offset);
 
 
   var fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
   var toProjection   = new OpenLayers.Projection("EPSG:900913"); // to Spherical Mercator Projection
   var position       = new OpenLayers.LonLat(lon, lat).transform( fromProjection, toProjection);
+  var position1      = new OpenLayers.LonLat(lon1, lat1).transform( fromProjection, toProjection);
+  var position2      = new OpenLayers.LonLat(lon2, lat2).transform( fromProjection, toProjection);
+  var position3      = new OpenLayers.LonLat(lon3, lat3).transform( fromProjection, toProjection);
+  var position4      = new OpenLayers.LonLat(lon4, lat4).transform( fromProjection, toProjection);
 
 
   map = new OpenLayers.Map("idMap");
@@ -142,7 +162,11 @@
 
   map.addLayer(markers);
   markers.addMarker(new OpenLayers.Marker(position, icon));
+  markers.addMarker(new OpenLayers.Marker(position1, icon1));
+  markers.addMarker(new OpenLayers.Marker(position2, icon2));
+  markers.addMarker(new OpenLayers.Marker(position3, icon3));
+  markers.addMarker(new OpenLayers.Marker(position4, icon4));
 
-  map.setCenter(position, zoom);
+  map.setCenter(position2, zoom);
 </script>
 
