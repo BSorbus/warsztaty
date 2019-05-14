@@ -1,11 +1,21 @@
-<style type="text/css">  
-  th {
-    background-color: #BECC25 !important;
-  }
-</style>
-
-
 <div class="container">
+  <br>  
+  <div class="row">
+    <div class="col-xs-6">
+      <%= link_to static_pages_job_1_path, class: "btn btn-default" do %>
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <%= t("static_pages.job_1.title") %>
+      <% end %>
+    </div> <!--/col-sm-6-->    
+
+    <div class="col-xs-6">
+      <%= link_to static_pages_job_3_path, class: "btn btn-default pull-right" do %>
+        <%= t("static_pages.job_3.title") %>
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      <% end %>
+    </div> <!--/col-sm-6-->    
+  </div> <!-- /row -->
+
   <div class="row">
     <div class="col-sm-12">
       <h1 class="center">
@@ -14,7 +24,328 @@
     </div> <!--/col-sm-12 -->
   </div> <!--/row -->
 
-  <br>
+  <div class="row">
+    <div class="col-sm-12">
+      <h3 class="text-justify">
+        Weryfikacja warunków określonych w porozumieniu POL-BY dotyczącym wykorzystywania pasma częstotliwości 880-915/925-960 MHz przez stacje BTS w rejonie przygranicznym
+      </h3> 
+    </div> <!--/col-sm-12 -->
+  </div> <!--/row -->
+
+  <div class="row">
+    <div class="col-sm-12">
+      <table class="table table-bordered" cellspacing="0" width="100%">
+        <tbody>
+          <tr>
+            <td><div class="col-xs-4">Data:<br><strong>22.05.2019r.</strong></div>
+                <div class="col-xs-4">Czas trwania:<br><strong>14:00 – 17:30 (3h 30min)</strong></div>
+                <div class="col-xs-4">Koordynator:<br><strong>S.Dudek</strong></div></td>
+          </tr>
+          <tr class="active">
+            <td><strong>I. Cel zadania</strong></td>
+          </tr>
+          <tr>
+            <td>Podniesienie kompetencji pracowników obsługujących Ruchome Stacje Pomiarowe w zakresie weryfikacji uzgodnień określonych w porozumieniach międzynarodowych (na przykładzie porozumienia dwustronnego POL-BY) dotyczących pracy stacji BTS zlokalizowanych w rejonach przygranicznych.</td>
+          </tr>
+          <tr class="active">
+            <td><strong>II. Miejsce zadania</strong></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="row">
+                <div class="col-sm-12">
+                  Obszar nadgraniczny z Białorusią ze szczególnym uwzględnieniem rejonu czterech stacji BTS zlokalizowanych w miejscowościach: Kuźnica, Zubrzyca Wielka, Krynki oraz Kruszyniany.
+                </div> <!--/col-sm-12 -->
+              </div> <!--/row -->
+              <br>
+
+              <div class="row">
+                <div class="col-sm-3">
+                  <div class="row">
+                    <div class="col-sm-2">
+                      <%= image_tag('marker.png', size: "48x48") %>
+                    </div> <!--/col-sm-2 -->
+                    <div class="col-sm-10">
+                      <%= link_to "Punkt 1 - Nawigacja", "https://www.google.pl/maps/place/53%C2%B031'24.5%22N+23%C2%B039'07.0%22E/@53.523478,23.6497473,17z/data=!3m1!4b1!4m6!3m5!1s0x0:0x0!7e2!8m2!3d53.5234775!4d23.651936?hl=pl", :target => "_blank" %>
+                      <br>
+                      <br>
+                    </div> <!--/col-sm-10 -->
+                  </div> <!--/row -->
+                </div> <!--/col-sm-3 -->
+
+                <div class="col-sm-3">
+                  <div class="row">
+                    <div class="col-sm-2">
+                      <%= image_tag('marker.png', size: "48x48") %>
+                    </div> <!--/col-sm-2 -->
+                    <div class="col-sm-10">
+                      <%= link_to "Punkt 2 - Nawigacja", "https://www.google.pl/maps/place/53%C2%B031'17.1%22N+23%C2%B039'14.0%22E/@53.521405,23.6517103,17z/data=!3m1!4b1!4m6!3m5!1s0x0:0x0!7e2!8m2!3d53.521405!4d23.6538994?hl=pl", :target => "_blank" %>
+                      <br>
+                      <br>
+                    </div> <!--/col-sm-10 -->
+                  </div> <!--/row -->
+                </div> <!--/col-sm-3 -->
+
+                <div class="col-sm-3">
+                  <div class="row">
+                    <div class="col-sm-2">
+                      <%= image_tag('marker.png', size: "48x48") %>
+                    </div> <!--/col-sm-2 -->
+                    <div class="col-sm-10">
+                      <%= link_to "Punkt 3 - Nawigacja", "https://www.google.pl/maps/place/53%C2%B031'11.0%22N+23%C2%B039'38.7%22E/@53.519714,23.6585663,17z/data=!3m1!4b1!4m6!3m5!1s0x0:0x0!7e2!8m2!3d53.5197138!4d23.6607555?hl=pl", :target => "_blank" %>
+                      <br>
+                      <br>
+                    </div> <!--/col-sm-10 -->
+                  </div> <!--/row -->
+                </div> <!--/col-sm-3 -->
+
+                <div class="col-sm-3">
+                  <div class="row">
+                    <div class="col-sm-2">
+                      <%= image_tag('marker.png', size: "48x48") %>
+                    </div> <!--/col-sm-2 -->
+                    <div class="col-sm-10">
+                      <%= link_to "Punkt 4 - Nawigacja", "https://www.google.pl/maps/place/53%C2%B030'48.2%22N+23%C2%B039'48.0%22E/@53.5131308,23.6611306,17z/data=!4m6!3m5!1s0x0:0x0!7e2!8m2!3d53.5133857!4d23.6633299?hl=pl", :target => "_blank" %>
+                      <br>
+                      <br>
+                    </div> <!--/col-sm-10 -->
+                  </div> <!--/row -->
+                </div> <!--/col-sm-3 -->
+              </div> <!--/row -->
+
+              <div class="row">
+                <div class="col-sm-3">
+                  <div class="row">
+                    <div class="col-sm-2">
+                      <%= image_tag('marker.png', size: "48x48") %>
+                    </div> <!--/col-sm-2 -->
+                    <div class="col-sm-10">
+                      <%= link_to "Punkt 5 - Nawigacja", "https://www.google.pl/maps/place/53%C2%B023'51.9%22N+23%C2%B043'51.9%22E/@53.39775,23.7288913,17z/data=!3m1!4b1!4m15!1m8!3m7!1s0x0:0x0!2zNTPCsDMxJzI0LjUiTiAyM8KwMzknMDcuMCJF!3b1!7e2!8m2!3d53.5234775!4d23.651936!3m5!1s0x0:0x0!7e2!8m2!3d53.3977497!4d23.7310805?hl=pl", :target => "_blank" %>
+                      <br>
+                      <br>
+                    </div> <!--/col-sm-10 -->
+                  </div> <!--/row -->
+                </div> <!--/col-sm-3 -->
+
+                <div class="col-sm-3">
+                  <div class="row">
+                    <div class="col-sm-2">
+                      <%= image_tag('marker.png', size: "48x48") %>
+                    </div> <!--/col-sm-2 -->
+                    <div class="col-sm-10">
+                      <%= link_to "Punkt 6 - Nawigacja", "https://www.google.pl/maps/place/53%C2%B022'47.6%22N+23%C2%B043'55.2%22E/@53.379876,23.7298003,17z/data=!3m1!4b1!4m15!1m8!3m7!1s0x0:0x0!2zNTPCsDMxJzI0LjUiTiAyM8KwMzknMDcuMCJF!3b1!7e2!8m2!3d53.5234775!4d23.651936!3m5!1s0x0:0x0!7e2!8m2!3d53.3798764!4d23.7319887?hl=pl", :target => "_blank" %>
+                      <br>
+                      <br>
+                    </div> <!--/col-sm-10 -->
+                  </div> <!--/row -->
+                </div> <!--/col-sm-3 -->
+
+                <div class="col-sm-3">
+                  <div class="row">
+                    <div class="col-sm-2">
+                      <%= image_tag('marker.png', size: "48x48") %>
+                    </div> <!--/col-sm-2 -->
+                    <div class="col-sm-10">
+                      <%= link_to "Punkt 7 - Nawigacja", "https://www.google.pl/maps/place/53%C2%B022'38.6%22N+23%C2%B044'35.8%22E/@53.377399,23.7410983,17z/data=!3m1!4b1!4m15!1m8!3m7!1s0x0:0x0!2zNTPCsDMxJzI0LjUiTiAyM8KwMzknMDcuMCJF!3b1!7e2!8m2!3d53.5234775!4d23.651936!3m5!1s0x0:0x0!7e2!8m2!3d53.3773992!4d23.7432865?hl=pl", :target => "_blank" %>
+                      <br>
+                      <br>
+                    </div> <!--/col-sm-10 -->
+                  </div> <!--/row -->
+                </div> <!--/col-sm-3 -->
+
+                <div class="col-sm-3">
+                  <div class="row">
+                    <div class="col-sm-2">
+                      <%= image_tag('marker.png', size: "48x48") %>
+                    </div> <!--/col-sm-2 -->
+                    <div class="col-sm-10">
+                      <%= link_to "Punkt 8 - Nawigacja", "https://www.google.pl/maps/place/53%C2%B022'25.6%22N+23%C2%B044'46.6%22E/@53.373776,23.7440813,17z/data=!3m1!4b1!4m15!1m8!3m7!1s0x0:0x0!2zNTPCsDMxJzI0LjUiTiAyM8KwMzknMDcuMCJF!3b1!7e2!8m2!3d53.5234775!4d23.651936!3m5!1s0x0:0x0!7e2!8m2!3d53.3737763!4d23.7462696?hl=pl", :target => "_blank" %>
+                      <br>
+                      <br>
+                    </div> <!--/col-sm-10 -->
+                  </div> <!--/row -->
+                </div> <!--/col-sm-3 -->
+              </div> <!--/row -->
+
+              <div class="row">
+                <div class="col-sm-3">
+                  <div class="row">
+                    <div class="col-sm-2">
+                      <%= image_tag('marker.png', size: "48x48") %>
+                    </div> <!--/col-sm-2 -->
+                    <div class="col-sm-10">
+                      <%= link_to "Punkt 9 - Nawigacja", "https://www.google.pl/maps/place/53%C2%B016'56.6%22N+23%C2%B047'40.4%22E/@53.282377,23.7923613,17z/data=!3m1!4b1!4m6!3m5!1s0x0:0x0!7e2!8m2!3d53.2823775!4d23.79455?hl=pl", :target => "_blank" %>
+                      <br>
+                      <br>
+                    </div> <!--/col-sm-10 -->
+                  </div> <!--/row -->
+                </div> <!--/col-sm-3 -->
+
+                <div class="col-sm-3">
+                  <div class="row">
+                    <div class="col-sm-2">
+                      <%= image_tag('marker.png', size: "48x48") %>
+                    </div> <!--/col-sm-2 -->
+                    <div class="col-sm-10">
+                      <%= link_to "Punkt 10 - Nawigacja", "https://www.google.pl/maps/place/53%C2%B016'27.3%22N+23%C2%B047'54.6%22E/@53.274262,23.7962983,17z/data=!3m1!4b1!4m6!3m5!1s0x0:0x0!7e2!8m2!3d53.2742619!4d23.7984875?hl=pl", :target => "_blank" %>
+                      <br>
+                      <br>
+                    </div> <!--/col-sm-10 -->
+                  </div> <!--/row -->
+                </div> <!--/col-sm-3 -->
+
+                <div class="col-sm-3">
+                  <div class="row">
+                    <div class="col-sm-2">
+                      <%= image_tag('marker.png', size: "48x48") %>
+                    </div> <!--/col-sm-2 -->
+                    <div class="col-sm-10">
+                      <%= link_to "Punkt 11 - Nawigacja", "https://www.google.pl/maps/place/53%C2%B015'54.9%22N+23%C2%B047'48.4%22E/@53.265241,23.7945923,17z/data=!3m1!4b1!4m6!3m5!1s0x0:0x0!7e2!8m2!3d53.2652405!4d23.7967811?hl=pl", :target => "_blank" %>
+                      <br>
+                      <br>
+                    </div> <!--/col-sm-10 -->
+                  </div> <!--/row -->
+                </div> <!--/col-sm-3 -->
+
+                <div class="col-sm-3">
+                  <div class="row">
+                    <div class="col-sm-2">
+                      <%= image_tag('marker.png', size: "48x48") %>
+                    </div> <!--/col-sm-2 -->
+                    <div class="col-sm-10">
+                      <%= link_to "Punkt 12 - Nawigacja", "https://www.google.pl/maps/place/53%C2%B015'46.3%22N+23%C2%B048'11.0%22E/@53.262867,23.8008583,17z/data=!3m1!4b1!4m6!3m5!1s0x0:0x0!7e2!8m2!3d53.2628666!4d23.8030466?hl=pl", :target => "_blank" %>
+                      <br>
+                      <br>
+                    </div> <!--/col-sm-10 -->
+                  </div> <!--/row -->
+                </div> <!--/col-sm-3 -->
+              </div> <!--/row -->
+
+              <div class="row">
+                <div class="col-sm-3">
+                  <div class="row">
+                    <div class="col-sm-2">
+                      <%= image_tag('marker.png', size: "48x48") %>
+                    </div> <!--/col-sm-2 -->
+                    <div class="col-sm-10">
+                      <%= link_to "Punkt 13 - Nawigacja", "https://www.google.pl/maps/place/53%C2%B011'09.1%22N+23%C2%B051'14.2%22E/@53.185865,23.8517563,17z/data=!3m1!4b1!4m6!3m5!1s0x0:0x0!7e2!8m2!3d53.1858652!4d23.8539446?hl=pl", :target => "_blank" %>
+                      <br>
+                      <br>
+                    </div> <!--/col-sm-10 -->
+                  </div> <!--/row -->
+                </div> <!--/col-sm-3 -->
+
+                <div class="col-sm-3">
+                  <div class="row">
+                    <div class="col-sm-2">
+                      <%= image_tag('marker.png', size: "48x48") %>
+                    </div> <!--/col-sm-2 -->
+                    <div class="col-sm-10">
+                      <%= link_to "Punkt 14 - Nawigacja", "https://www.google.pl/maps/place/53%C2%B010'25.3%22N+23%C2%B053'03.4%22E/@53.173699,23.8820973,17z/data=!3m1!4b1!4m6!3m5!1s0x0:0x0!7e2!8m2!3d53.1736993!4d23.8842861?hl=pl", :target => "_blank" %>
+                      <br>
+                      <br>
+                    </div> <!--/col-sm-10 -->
+                  </div> <!--/row -->
+                </div> <!--/col-sm-3 -->
+
+                <div class="col-sm-3">
+                  <div class="row">
+                    <div class="col-sm-2">
+                      <%= image_tag('marker.png', size: "48x48") %>
+                    </div> <!--/col-sm-2 -->
+                    <div class="col-sm-10">
+                      <%= link_to "Punkt 15 - Nawigacja", "https://www.google.pl/maps/place/53%C2%B009'48.8%22N+23%C2%B053'56.0%22E/@53.163563,23.8966893,17z/data=!3m1!4b1!4m6!3m5!1s0x0:0x0!7e2!8m2!3d53.163563!4d23.8988779?hl=pl", :target => "_blank" %>
+                      <br>
+                      <br>
+                    </div> <!--/col-sm-10 -->
+                  </div> <!--/row -->
+                </div> <!--/col-sm-3 -->
+
+                <div class="col-sm-3">
+                  <div class="row">
+                    <div class="col-sm-2">
+                      <%= image_tag('marker.png', size: "48x48") %>
+                    </div> <!--/col-sm-2 -->
+                    <div class="col-sm-10">
+                      <%= link_to "Punkt 16 - Nawigacja", "https://www.google.pl/maps/place/53%C2%B009'02.4%22N+23%C2%B054'22.1%22E/@53.150671,23.9039413,17z/data=!3m1!4b1!4m6!3m5!1s0x0:0x0!7e2!8m2!3d53.1506706!4d23.9061298?hl=pl", :target => "_blank" %>
+                      <br>
+                      <br>
+                    </div> <!--/col-sm-10 -->
+                  </div> <!--/row -->
+                </div> <!--/col-sm-3 -->
+              </div> <!--/row -->
+
+              <br>
+              <div id="idMap" style="width: 100%; height: 75vh;"></div></td>
+          </tr>
+          <tr class="active">
+            <td><strong>III. Niezbędne wyposażenie</strong></td>
+          </tr>
+          <tr>
+            <td>1. Ruchoma Stacja Pomiarowa</td>
+          </tr>
+          <tr>
+            <td>2. Przyrząd lub zestaw przyrządów do wykonania podstawowych pomiarów parametrów sygnału (częstotliwość, szerokość pasma, poziom natężenia pola)</td>
+          </tr>
+          <tr>
+            <td>3. Wykaz kanałów preferencyjnych dla Polski i Białorusi (tabela lub tekst porozumienia POL-BY)</td>
+          </tr>
+          <tr>
+            <td>4. Skrypt – Instrukcje pomiarowe oraz instrukcja do zadania</td>
+          </tr>
+          <tr>
+            <td>5. Laptop lub inny komputer do opracowania raportu</td>
+          </tr>
+          <tr>
+            <td>6. Przygotowany wzór formularza raportu na pendrivie</td>
+          </tr>
+          <tr>
+            <td>7. Telefon komórkowy do łączności</td>
+          </tr>
+          <tr class="active">
+            <td><strong>IV. Przebieg zadania</strong></td>
+          </tr>
+          <tr>
+            <td><div class="col-xs-2">14:00 - 14:15</div><div class="col-xs-10">Losowanie punktu pomiarowego (1 z 16)</div></td>
+          </tr>
+          <tr>
+            <td><div class="col-xs-2">14:15 - 15:00</div><div class="col-xs-10">Przejazd ekipy RSP do wylosowanego punktu pomiarowego</div></td>
+          </tr>
+          <tr>
+            <td><div class="col-xs-2">15:00 - 16:00</div>
+                <div class="col-xs-10">
+                  1. Rozstawienie stacji RSP w punkcie pomiarowym<br>
+                  2. Monitoring pasm zawierających kanały niepreferencyjne dla Polski (wysokość zawieszenia anteny pomiarowej -  10 m n.p.t.).<br>
+                  3. Zlokalizowanie kanałów niepreferencyjnych, które są emitowane ze stacji bazowej polskiego operatora w systemie GSM 900.<br>
+                  4.  Pomiar poziomu sygnałów zlokalizowanych kanałów (z punktu 3) na wysokości zawieszenia anteny 10 m n.p.t., a następnie na wysokości 4 m n.p.t.<br>
+                  5.  Wypełnienie formularza wynikami pomiarów na granicy.
+                </div></td>
+          </tr>
+          <tr>
+            <td><div class="col-xs-2">16:00 - 17:00</div>
+                <div class="col-xs-10">
+                  1. Monitoring pasma 925-960 MHz (wysokość zawieszenia anteny pomiarowej - 10 m n.p.t.).<br>
+                  2. Zlokalizowanie sygnałów, które są emitowane ze stacji bazowej polskiego operatora w systemie UMTS 900.<br>
+                  3. Pomiar poziomu zlokalizowanych sygnałów (z punktu 2) na wysokości zawieszenia anteny 10 m n.p.t.<br>
+                  4. Wypełnienie formularza wynikami pomiarów na granicy.<br>
+                  5. Złożenie stacji RSP.
+                </div></td>
+          </tr>
+          <tr>
+            <td><div class="col-xs-2">17:00 - 17:30</div>
+                <div class="col-xs-10">
+                  1. Opracowanie wniosków dotyczących pracy polskiej stacji bazowej np.: przekroczone poziomy sygnałów nadawanych na kanałach niepreferencyjnych w systemie GSM 900, przekroczone poziomy sygnałów nadawanych w systemie UMTS 900 itp<br>
+                  2. Przekazanie pendriva z opracowanymi wynikami koordynatorowi..
+                </div></td>
+          </tr>
+          <tr>
+            <td><div class="col-xs-2">17:30 - 18:00</div><div class="col-xs-10">Powrót do miejsca zakwaterowania</div></td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div> <!--/col-sm-12 -->
+  </div> <!--/row -->
 
   <div class="row">
     <div class="col-xs-6">
@@ -35,3 +366,127 @@
 </div> <!--/container -->
 
  
+ 
+<script src="https://www.openlayers.org/api/OpenLayers.js"></script>
+
+<script>
+  //var lat            = <%#= partial_data.lat %>;
+  //var lon            = <%#= partial_data.lng %>;
+  var lat1            = 53.523478;
+  var lon1            = 23.6497473;
+
+  var lat2            = 53.521405;
+  var lon2            = 23.6517103;
+
+  var lat3            = 53.519714;
+  var lon3            = 23.6585663;
+
+  var lat4            = 53.5131308;
+  var lon4            = 23.6611306;
+
+  var lat5            = 53.39775;
+  var lon5            = 23.7288913;
+
+  var lat6            = 53.379876;
+  var lon6            = 23.7298003;
+
+  var lat7            = 53.377399;
+  var lon7            = 23.7410983;
+
+  var lat8            = 53.373776;
+  var lon8            = 23.7440813;
+
+  var lat9            = 53.282377;
+  var lon9            = 23.7923613;
+
+  var lat10           = 53.274262;
+  var lon10           = 23.7962983;
+
+  var lat11           = 53.265241;
+  var lon11           = 23.7945923;
+
+  var lat12           = 53.262867;
+  var lon12           = 23.8008583;
+
+  var lat13           = 53.185865;
+  var lon13           = 23.8517563;
+
+  var lat14           = 53.173699;
+  var lon14           = 23.8820973;
+
+  var lat15           = 53.163563;
+  var lon15           = 23.8966893;
+
+  var lat16           = 53.150671;
+  var lon16           = 23.9039413;
+
+
+  var zoom           = 10;
+  var size = new OpenLayers.Size(36,36);
+  var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
+  var icon1 = new OpenLayers.Icon("<%= asset_path('marker.png', locale: locale) %>", size, offset);
+  var icon2 = new OpenLayers.Icon("<%= asset_path('marker.png', locale: locale) %>", size, offset);
+  var icon3 = new OpenLayers.Icon("<%= asset_path('marker.png', locale: locale) %>", size, offset);
+  var icon4 = new OpenLayers.Icon("<%= asset_path('marker.png', locale: locale) %>", size, offset);
+  var icon5 = new OpenLayers.Icon("<%= asset_path('marker.png', locale: locale) %>", size, offset);
+  var icon6 = new OpenLayers.Icon("<%= asset_path('marker.png', locale: locale) %>", size, offset);
+  var icon7 = new OpenLayers.Icon("<%= asset_path('marker.png', locale: locale) %>", size, offset);
+  var icon8 = new OpenLayers.Icon("<%= asset_path('marker.png', locale: locale) %>", size, offset);
+  var icon9 = new OpenLayers.Icon("<%= asset_path('marker.png', locale: locale) %>", size, offset);
+  var icon10 = new OpenLayers.Icon("<%= asset_path('marker.png', locale: locale) %>", size, offset);
+  var icon11 = new OpenLayers.Icon("<%= asset_path('marker.png', locale: locale) %>", size, offset);
+  var icon12 = new OpenLayers.Icon("<%= asset_path('marker.png', locale: locale) %>", size, offset);
+  var icon13 = new OpenLayers.Icon("<%= asset_path('marker.png', locale: locale) %>", size, offset);
+  var icon14 = new OpenLayers.Icon("<%= asset_path('marker.png', locale: locale) %>", size, offset);
+  var icon15 = new OpenLayers.Icon("<%= asset_path('marker.png', locale: locale) %>", size, offset);
+  var icon16 = new OpenLayers.Icon("<%= asset_path('marker.png', locale: locale) %>", size, offset);
+
+
+  var fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
+  var toProjection   = new OpenLayers.Projection("EPSG:900913"); // to Spherical Mercator Projection
+  var position1      = new OpenLayers.LonLat(lon1, lat1).transform( fromProjection, toProjection);
+  var position2      = new OpenLayers.LonLat(lon2, lat2).transform( fromProjection, toProjection);
+  var position3      = new OpenLayers.LonLat(lon3, lat3).transform( fromProjection, toProjection);
+  var position4      = new OpenLayers.LonLat(lon4, lat4).transform( fromProjection, toProjection);
+  var position5      = new OpenLayers.LonLat(lon5, lat5).transform( fromProjection, toProjection);
+  var position6      = new OpenLayers.LonLat(lon6, lat6).transform( fromProjection, toProjection);
+  var position7      = new OpenLayers.LonLat(lon7, lat7).transform( fromProjection, toProjection);
+  var position8      = new OpenLayers.LonLat(lon8, lat8).transform( fromProjection, toProjection);
+  var position9      = new OpenLayers.LonLat(lon9, lat9).transform( fromProjection, toProjection);
+  var position10     = new OpenLayers.LonLat(lon10, lat10).transform( fromProjection, toProjection);
+  var position11     = new OpenLayers.LonLat(lon11, lat11).transform( fromProjection, toProjection);
+  var position12     = new OpenLayers.LonLat(lon12, lat12).transform( fromProjection, toProjection);
+  var position13     = new OpenLayers.LonLat(lon13, lat13).transform( fromProjection, toProjection);
+  var position14     = new OpenLayers.LonLat(lon14, lat14).transform( fromProjection, toProjection);
+  var position15     = new OpenLayers.LonLat(lon15, lat15).transform( fromProjection, toProjection);
+  var position16     = new OpenLayers.LonLat(lon16, lat16).transform( fromProjection, toProjection);
+
+
+  map = new OpenLayers.Map("idMap");
+
+  var mapnik         = new OpenLayers.Layer.OSM();
+  map.addLayer(mapnik);
+
+  var markers = new OpenLayers.Layer.Markers( "Markers" );
+
+  map.addLayer(markers);
+  markers.addMarker(new OpenLayers.Marker(position1, icon1));
+  markers.addMarker(new OpenLayers.Marker(position2, icon2));
+  markers.addMarker(new OpenLayers.Marker(position3, icon3));
+  markers.addMarker(new OpenLayers.Marker(position4, icon4));
+  markers.addMarker(new OpenLayers.Marker(position5, icon5));
+  markers.addMarker(new OpenLayers.Marker(position6, icon6));
+  markers.addMarker(new OpenLayers.Marker(position7, icon7));
+  markers.addMarker(new OpenLayers.Marker(position8, icon8));
+  markers.addMarker(new OpenLayers.Marker(position9, icon9));
+  markers.addMarker(new OpenLayers.Marker(position10, icon10));
+  markers.addMarker(new OpenLayers.Marker(position11, icon11));
+  markers.addMarker(new OpenLayers.Marker(position12, icon12));
+  markers.addMarker(new OpenLayers.Marker(position13, icon13));
+  markers.addMarker(new OpenLayers.Marker(position14, icon14));
+  markers.addMarker(new OpenLayers.Marker(position15, icon15));
+  markers.addMarker(new OpenLayers.Marker(position16, icon16));
+
+  map.setCenter(position8, zoom);
+</script>
+

@@ -50,6 +50,7 @@ Rails.application.routes.draw do
   get 'static_pages/job_2'
   get 'static_pages/job_3'
   get 'static_pages/job_4'
+  get 'static_pages/job_5'
 
   root to: 'static_pages#home'
 

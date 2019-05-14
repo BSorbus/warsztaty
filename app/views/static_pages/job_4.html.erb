@@ -1,11 +1,21 @@
-<style type="text/css">  
-  th {
-    background-color: #BECC25 !important;
-  }
-</style>
-
-
 <div class="container">
+  <br>
+  <div class="row">
+    <div class="col-xs-6">
+      <%= link_to static_pages_job_3_path, class: "btn btn-default" do %>
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <%= t("static_pages.job_3.title") %>
+      <% end %>
+    </div> <!--/col-sm-6-->    
+
+    <div class="col-xs-6">
+      <%= link_to static_pages_job_5_path, class: "btn btn-default pull-right" do %>
+        <%= t("static_pages.job_5.title") %>
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      <% end %>
+    </div> <!--/col-sm-6-->    
+  </div> <!-- /row -->
+    
   <div class="row">
     <div class="col-sm-12">
       <h1 class="center">
@@ -14,13 +24,119 @@
     </div> <!--/col-sm-12 -->
   </div> <!--/row -->
 
-  <br>
+  <div class="row">
+    <div class="col-sm-12">
+      <h3 class="text-justify">
+        Diagnostyka RSP wraz z ćwiczeniem awaryjnego składania masztu 
+      </h3> 
+    </div> <!--/col-sm-12 -->
+  </div> <!--/row -->
 
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-sm-12">
+      <table class="table table-bordered" cellspacing="0" width="100%">
+        <tbody>
+          <tr>
+            <td><div class="col-xs-4">Data:<br><strong>23.05.2019r.</strong></div>
+                <div class="col-xs-4">Czas trwania:<br><strong>14:00 – 17:30 (3h 30min)</strong></div>
+                <div class="col-xs-4">Koordynator:<br><strong>M.Woźniak</strong></div></td>
+          </tr>
+          <tr class="active">
+            <td><strong>I. Cel zadania</strong></td>
+          </tr>
+          <tr>
+            <td>Sprawdzenie stanu Ruchomych Stacji Pomiarowych, w szczególności ich torów w.cz. , precyzji namierzania oraz nabycie umiejętności ręcznego opuszczania masztu w przypadku awarii napędu</td>
+          </tr>
+          <tr class="active">
+            <td><strong>II. Miejsce zadania</strong></td>
+          </tr>
+          <tr>
+            <td>
+              <div class="row">
+                <div class="col-sm-2">
+                  <%= image_tag('marker.png', size: "48x48") %>
+                </div> <!--/col-sm-2 -->
+                <div class="col-sm-10">
+                  <p>Teren Folwarku Nadawki k. Białegostoku.</p>
+                  <%= link_to "Nawigacja", "https://www.google.pl/maps/place/Folwark+Nadawki/@53.1822042,23.150403,17z/data=!3m1!4b1!4m5!3m4!1s0x471ffda433e20ad3:0x72dac635d76923eb!8m2!3d53.182201!4d23.152597?hl=pl", :target => "_blank" %>
+                  <br>
+                  <br>
+                </div> <!--/col-sm-10 -->
+              </div> <!--/row -->
+              <div id="idMap" style="width: 100%; height: 75vh;"></div></td>
+          </tr>
+          <tr class="active">
+            <td><strong>III. Niezbędne wyposażenie</strong></td>
+          </tr>
+          <tr>
+            <td>1. Ruchoma Stacja Pomiarowa</td>
+          </tr>
+          <tr>
+            <td>2. Przyrząd lub zestaw przyrządów do wykonania zdalnych pomiarów parametrów sygnału (częstotliwość, szerokość pasma, poziom natężenia pola)</td>
+          </tr>
+          <tr>
+            <td>3. Korba do ręcznego opuszczania masztu oraz płaski klucz 13</td>
+          </tr>
+          <tr>
+            <td>4. Skrypt – Instrukcje pomiarowe oraz instrukcja do zadania</td>
+          </tr>
+          <tr>
+            <td>5. Laptop lub inny komputer do opracowania raportu</td>
+          </tr>
+          <tr>
+            <td>6. Przygotowany wzór formularza raportu na pendrivie</td>
+          </tr>
+          <tr>
+            <td>7. Telefon komórkowy do łączności</td>
+          </tr>
+          <tr class="active">
+            <td><strong>IV. Przebieg zadania</strong></td>
+          </tr>
+          <tr>
+            <td><div class="col-xs-2">14:00 - 14:20</div><div class="col-xs-10">Rozstawienie stacji pomiarowych</div></td>
+          </tr>
+          <tr>
+            <td><div class="col-xs-2">14:20 - 16:45</div>
+                <div class="col-xs-10">
+                  1. Pomiar poziomu napięcia dla podanych sygnałów.<br>
+
+                  2. Pomiar azymutu, poziomu napięcia oraz jakości namierzania dla podanych sygnałów:<br>
+                  &nbsp;&nbsp;&nbsp;- RSP ustawiona w ustawieniu początkowym,<br>
+                  &nbsp;&nbsp;&nbsp;- RSP ustawiona w ustawieniu przeciwnie (1800).<br>
+
+                  3. Ćwiczenie awaryjnego opuszczania masztu.
+
+                </div></td>
+          </tr>
+          <tr>
+            <td><div class="col-xs-2">16:45 - 17:30</div>
+                <div class="col-xs-10">Przygotowanie wyników pomiarów na załączonym formularzu.</div></td>
+          </tr>
+          <tr>
+            <td><div class="col-xs-2">17:30</div><div class="col-xs-10">Przekazanie pendriva z opracowanymi wynikami koordynatorowi szkolenia.</div></td>
+          </tr>
+          <tr>
+            <td><div class="col-xs-2">17:30 - 18:30</div>
+                <div class="col-xs-10">Złożenie stacji pomiarowych i powrót do miejsca zakwaterowania.</div></td>
+          </tr>
+        </tbody>
+
+      </table>
+    </div> <!--/col-sm-12 -->
+  </div> <!--/row -->
+
+  <div class="row">
+    <div class="col-xs-6">
       <%= link_to static_pages_job_3_path, class: "btn btn-default" do %>
         <span class="glyphicon glyphicon-chevron-left"></span>
         <%= t("static_pages.job_3.title") %>
+      <% end %>
+    </div> <!--/col-sm-6-->    
+
+    <div class="col-xs-6">
+      <%= link_to static_pages_job_5_path, class: "btn btn-default pull-right" do %>
+        <%= t("static_pages.job_5.title") %>
+        <span class="glyphicon glyphicon-chevron-right"></span>
       <% end %>
     </div> <!--/col-sm-6-->    
   </div> <!-- /row -->
@@ -28,3 +144,36 @@
 </div> <!--/container -->
 
  
+ 
+<script src="https://www.openlayers.org/api/OpenLayers.js"></script>
+
+<script>
+  //var lat            = <%#= partial_data.lat %>;
+  //var lon            = <%#= partial_data.lng %>;
+  var lat           = 53.182220;
+  var lon           = 23.152613;
+
+  var zoom          = 15;
+  var size = new OpenLayers.Size(36,36);
+  var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
+  var icon = new OpenLayers.Icon("<%= asset_path('marker.png', locale: locale) %>", size, offset);
+
+
+  var fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
+  var toProjection   = new OpenLayers.Projection("EPSG:900913"); // to Spherical Mercator Projection
+  var position       = new OpenLayers.LonLat(lon, lat).transform( fromProjection, toProjection);
+
+
+  map = new OpenLayers.Map("idMap");
+
+  var mapnik         = new OpenLayers.Layer.OSM();
+  map.addLayer(mapnik);
+
+  var markers = new OpenLayers.Layer.Markers( "Markers" );
+
+  map.addLayer(markers);
+  markers.addMarker(new OpenLayers.Marker(position, icon));
+
+  map.setCenter(position, zoom);
+</script>
+

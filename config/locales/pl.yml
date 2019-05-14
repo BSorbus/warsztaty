@@ -19,6 +19,7 @@ pl:
       job_2: 'Zadanie 2'
       job_3: 'Zadanie 3'
       job_4: 'Zadanie 4'
+      job_5: 'Zadanie 5'
       introduction: 'Wprowadzenie'
       survey: 'Ankieta'
     navigation_right_links:
@@ -45,6 +46,8 @@ pl:
       title: 'Zadanie 3'
     job_4:
       title: 'Zadanie 4'
+    job_5:
+      title: 'Zadanie 5'
     jobs:
       carousel:
         navbar: 'Zadania'

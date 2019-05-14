@@ -1,12 +1,14 @@
-<style type="text/css">  
-  th {
-    background-color: #BECC25 !important;
-  }
-</style>
-
-
 <div class="container">
-  
+  <br>
+  <div class="row">
+    <div class="col-xs-12">
+      <%= link_to static_pages_job_2_path, class: "btn btn-default pull-right" do %>
+        <%= t("static_pages.job_2.title") %>
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      <% end %>
+    </div> <!--/col-sm-6-->    
+  </div> <!-- /row -->
+
   <div class="row">
     <div class="col-sm-12">
       <h1 class="center">
@@ -14,8 +16,6 @@
       </h1>
     </div> <!--/col-sm-12 -->
   </div> <!--/row -->
-
-  <br>
 
   <div class="row">
     <div class="col-sm-12">
@@ -33,53 +33,53 @@
             <td><div class="col-xs-4">Data:<br><strong>22.05.2019r.</strong></div>
                 <div class="col-xs-4">Czas trwania:<br><strong>9:00 – 13:00 (4h)</strong></div>
                 <div class="col-xs-4">Koordynator:<br><strong>M. Woźniak</strong></div></td>
-          <tr>
+          </tr>
           <tr class="active">
             <td><strong>I. Cel zadania</strong></td>
-          <tr>
+          </tr>
           <tr>
             <td>Podniesienie kompetencji pracowników obsługujących Ruchome Stacje Pomiarowe w zakresie lokalizowania źródła zakłóceń położonego za granicą, ograniczonego brakiem możliwości dotarcia bezpośrednio do tego źródła oraz nabycie umiejętności opracowania Raportu - Zgłoszenia szkodliwych zakłóceń (zgodnego z Zał. 10 RR)</td>
-          <tr>
+          </tr>
           <tr class="active">
             <td><strong>II. Miejsce zadania</strong></td>
-          <tr>
+          </tr>
           <tr>
             <td>Obszar nadgraniczny z Białorusią na długości kilkudziesięciu kilometrów.<br>
               <div id="idMap" style="width: 100%; height: 75vh;"></div></td>
-          <tr>
+          </tr>
           <tr class="active">
             <td><strong>III. Niezbędne wyposażenie</strong></td>
-          <tr>
+          </tr>
           <tr>
             <td>1. Ruchoma Stacja Pomiarowa</td>
-          <tr>
+          </tr>
           <tr>
             <td>2. Przyrząd lub zestaw przyrządów do wykonania podstawowych pomiarów parametrów sygnału (częstotliwość, szerokość pasma, poziom natężenia pola)</td>
-          <tr>
+          </tr>
           <tr>
             <td>3. Przyrząd lub zestaw przyrządów do wykonania namiarów dowolna techniką (namierzanie DF, namierzanie w ruchu namierzanie amplitudowe) – może być tożsamy z określ. w pkt. 2</td>
-          <tr>
+          </tr>
           <tr>
             <td>4. Podkład mapowy do prezentacji namiarów, lokalizacji</td>
+          </tr>
           <tr>
-          <tr>
-            <td>5. Skrypt – Instrukcje pomiarowe oraz instrukcja do Zadania</td>
-          <tr>
+            <td>5. Skrypt – Instrukcje pomiarowe oraz instrukcja do zadania</td>
+          </tr>
           <tr>
             <td>6. Laptop lub inny komputer do opracowania raportu</td>
-          <tr>
+          </tr>
           <tr>
             <td>7. Przygotowany wzór formularza raportu na pendrivie</td>
-          <tr>
+          </tr>
           <tr>
             <td>8. Telefon komórkowy do łączności</td>
-          <tr>
+          </tr>
           <tr class="active">
             <td><strong>IV. Przebieg zadania</strong></td>
-          <tr>
+          </tr>
           <tr>
             <td><div class="col-xs-2">8:50 - 9:00</div><div class="col-xs-10">Losowanie zadań pomiarowych</div></td>
-          <tr>
+          </tr>
           <tr>
             <td><div class="col-xs-2">9:00 - 11:45</div>
                 <div class="col-xs-10">
@@ -89,13 +89,13 @@
                   4. Pomiar sygnału zakłócającego (poziom E, częstotliwość, szerokość pasma, rejestracja obwiedni widma)<br>
                   5. Przemieszczanie się w celu wykonania namiarów do precyzyjnego wskazania potencjalnej lokalizacji źródła zakłóceń (do zaprezentowania w raporcie)
                 </div></td>
-          <tr>
+          </tr>
           <tr>
             <td><div class="col-xs-2">11:45 - 12:30</div><div class="col-xs-10">Przygotowanie raportu (załącznik 10 RR) na pedrivach</div></td>
-          <tr>
+          </tr>
           <tr>
             <td><div class="col-xs-2">12:30 - 13:00</div><div class="col-xs-10">Powrót do miejsca spożycia obiadu</div></td>
-          <tr>
+          </tr>
         </tbody>
 
       </table>
@@ -122,7 +122,7 @@
   var lat            = 53.2065016;
   var lon            = 23.8555551;
 
-  var zoom           = 12;
+  var zoom           = 14;
   var size = new OpenLayers.Size(36,36);
   var offset = new OpenLayers.Pixel(-(size.w/2), -size.h);
   var icon = new OpenLayers.Icon("<%= asset_path('marker.png', locale: locale) %>", size, offset);
