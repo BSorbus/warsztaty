@@ -32,9 +32,9 @@ class SurveyMailer < ActionMailer::Base
     attachments.inline['logo.jpg'] = File.read("app/assets/images/app_logo.png")
     attachments.inline['puchar.jpg'] = File.read("app/assets/images/puchar.png")
     attachments.inline['logo_uke.jpg'] = File.read("app/assets/images/logo_uke_pl_do_lewej_small.png")
-    # #users_emails = User.flat_map {|row| row.email}
-    # #mail(to: user_emails.join(','), subject: "WARSZTATY RSP - wyniki ankiety" )
-    mail(to: "bogdan.jarzab@uke.gov.pl", subject: "WARSZTATY RSP - wyniki ankiety" )
+    users_emails = User.flat_map {|row| row.email}
+    mail(to: user_emails.join(','), subject: "WARSZTATY RSP - wyniki ankiety" )
+    #mail(to: "bogdan.jarzab@uke.gov.pl", subject: "WARSZTATY RSP - wyniki ankiety" )
   end
 
 end
