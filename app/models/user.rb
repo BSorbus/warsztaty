@@ -85,6 +85,11 @@ class User < ApplicationRecord
   end
 
   def name_as_link
+    link_to "#{self.name}", "#{url_helpers.user_path(self)}"
+    # "<a href=#{url_helpers.user_path(self)}>#{self.name}</a>".html_safe
+  end
+
+  def photo_as_link
     # puts '========================================'
     # #puts link_to "#{self.name}", "#{url_helpers.user_path(self)}"
     # puts self.photo.previewable?
@@ -93,10 +98,6 @@ class User < ApplicationRecord
     # puts '========================================'
 
     link_to image_tag(Rails.application.routes.url_helpers.rails_blob_path(self.photo, only_path: true), width: "50") + "  #{self.name}", "#{url_helpers.user_path(self)}"
-
-
-    #link_to "#{self.name}", "#{url_helpers.user_path(self)}"
-    # "<a href=#{url_helpers.user_path(self)}>#{self.name}</a>".html_safe
   end
 
   def surveys_any

@@ -18,7 +18,7 @@ class UserDatatable < AjaxDatatablesRails::ActiveRecord
     records.map do |record|
       {
         id:                   record.id,
-        name:                 record.name_as_link,
+        name:                 record.photo_as_link,
         department:           record.department.short,
         current_sign_in_ip:   record.current_sign_in_ip,
         current_sign_in_at:   record.current_sign_in_at.present? ? record.current_sign_in_at.strftime("%Y-%m-%d %H:%M:%S") : '' ,
