@@ -33,7 +33,7 @@
     </div> <!--/col-sm-12 -->
   </div> <!-- /row -->
 
-  <% if Survey.all.count < Role.find(5).users.count %>
+  <% if Survey.all.count >= Role.find(5).users.count %>
     <%= render partial: "data_charts" %>
   <% end %>
 

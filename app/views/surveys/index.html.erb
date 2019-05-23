@@ -39,7 +39,7 @@
   <div class="row">
     <div class="col-sm-12">
 
-      <% enabled_disabled = (Survey.all.count >= Role.find(5).users.count) ? "disabled" : "" %> 
+      <% enabled_disabled = (Survey.all.count < Role.find(5).users.count) ? "disabled" : "" %> 
       <%= link_to send_score_surveys_path, class: "btn btn-warning btn-lg #{enabled_disabled}" do %>
         <span class="fa fa-envelope"></span>&nbsp;<%= t("helpers.links.send_email") %>
       <% end %>
