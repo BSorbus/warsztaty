@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="gallery">
+    <div class="row gallery-row">
+    <% @expositions.each do |row| %>
+      <a href="<%= url_for(row.photo) %>" data-gallery="multiimages" data-type="<%= row.photo.content_type.to_s.split('/')[0] %>" data-toggle="lightbox" data-title="<%= row.name %>" >
+        <%= image_tag(row.photo, height: 100 ) %> 
+      </a>
+
+    <% end %>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+  $(document).on('click', '[data-toggle="lightbox"]', function(event) {
+                  event.preventDefault();
+                  $(this).ekkoLightbox({
+                    gallery_parent_selector: '.gallery',
+                    alwaysShowClose: true,
+                    showArrows: false
+                  });
+              });  
+
+</script>

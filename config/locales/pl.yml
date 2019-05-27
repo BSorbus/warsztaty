@@ -23,6 +23,7 @@ pl:
       introduction: 'Wprowadzenie'
       survey: 'Ankieta'
       surveys_score: 'Wyniki'
+      expositions: 'Galeria'
     navigation_right_links:
       management: 'Zarządzanie'
       users: 'Użytkownicy'
@@ -98,6 +99,19 @@ pl:
     question_4:
       fieldset_title: 'Pytanie 4'
       body: 'Najbardziej zadbana i czysta Ruchoma Stacja Pomiarowa (RSP)'
+  expositions:
+    carousel:
+      navbar: 'Galeria'
+      title: "Galeria zdjęć i filmów"
+    index:
+      title: 'Galeria zdjęć i filmów'
+      fieldset_title: 'Dodaj zdjęcie/film'
+    new:
+      title: 'Nowy Slajd'
+    edit:
+      title: 'Edyja Slajdu'
+    show:
+      title: 'Slajd'
   activerecord:
     errors:
       messages:
@@ -124,6 +138,7 @@ pl:
     models:
       user: 'Użytkownik'
       role: 'Rola'
+      exposition: 'Obraz'
       survey: 'Ankieta'
       work: 'Dziennik działań'
     attributes:
@@ -167,6 +182,9 @@ pl:
         user_id: 'Wypełnił'
         created_at: 'Uworzono'
         updated_at: 'Aktualizowano'
+      exposition:
+        name: 'Tytuł'
+        photo: 'Plik'
       work:
         created_at: 'Data'
         created_by: 'Autor'

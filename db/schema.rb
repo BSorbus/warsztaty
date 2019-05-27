@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_08_114031) do
+ActiveRecord::Schema.define(version: 2019_05_27_080355) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,14 @@ ActiveRecord::Schema.define(version: 2019_05_08_114031) do
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_departments_on_name", unique: true
     t.index ["short"], name: "index_departments_on_short", unique: true
+  end
+
+  create_table "expositions", force: :cascade do |t|
+    t.string "name"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_expositions_on_user_id"
   end
 
   create_table "old_passwords", force: :cascade do |t|
@@ -141,6 +149,7 @@ ActiveRecord::Schema.define(version: 2019_05_08_114031) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "expositions", "users"
   add_foreign_key "roles_users", "roles"
   add_foreign_key "roles_users", "users"
   add_foreign_key "surveys", "users"

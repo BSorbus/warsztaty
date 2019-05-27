@@ -6,8 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-users_emails = User.all.flat_map {|row| row.email}
-puts '-------------------------------------------------------------------'
-puts users_emails
-puts '-------------------------------------------------------------------'
-puts users_emails.join(',')
+role = CreateRoleService.new.exposition_admin
+puts 'CREATED ROLE: ' << role.name
+role.log_work('create', 1)
+

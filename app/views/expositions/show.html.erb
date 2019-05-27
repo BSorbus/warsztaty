@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @exposition.name %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @exposition.user %>
+</p>
+
+<%= link_to 'Edit', edit_exposition_path(@exposition) %> |
+<%= link_to 'Back', expositions_path %>

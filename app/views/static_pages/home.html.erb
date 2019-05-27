@@ -20,6 +20,7 @@
           <li data-target="#carousel-example-generic" data-slide-to="1"></li>
           <li data-target="#carousel-example-generic" data-slide-to="2"></li>
           <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+          <li data-target="#carousel-example-generic" data-slide-to="4"></li>
         </ol>
 
         <!-- Wrapper for slides -->
@@ -56,6 +57,15 @@
                 <span class="btn btn-primary"><%= t("surveys.carousel.navbar") %></span>
               <% end %>
               <h4><%= t("surveys.carousel.title") %></h4>
+            </div>
+          </div>
+          <div class="item">
+            <%= image_tag("04.png") %>
+            <div class="carousel-caption">
+              <%= link_to expositions_path do %>
+                <span class="btn btn-primary"><%= t("expositions.carousel.navbar") %></span>
+              <% end %>
+              <h4><%= t("expositions.carousel.title") %></h4>
             </div>
           </div>
         </div>

@@ -38,10 +38,11 @@ class CreateRoleService
       role.save!
     end
   end
-  def survey_observer
-    role = Role.find_or_create_by!(name: "Obserwator Wyników Ankiet") do |role|
-#      role.activities += %w(survey:self_show survey::self_create)
-      role.note = "Rola pozwala wypełniać ankietę. \r\n (Przypisz Użytkownikom, którzy mają wypełnić ankietę)"
+  # surveys
+  def exposition_admin
+    role = Role.find_or_create_by!(name: "Administrator Galerii Obrazów") do |role|
+      role.activities += %w(exposition:index exposition:show exposition:create exposition:update exposition:delete exposition:work)
+      role.note = "Rola służy do zarządzania Galerią obrazów. \r\n (Przypisz tylko zaawansowanym Użytkownikom systemu)"
       role.save!
     end
   end

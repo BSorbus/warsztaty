@@ -42,6 +42,7 @@ Rails.application.routes.draw do
     get 'xml_miejsce_realizacji_tables', on: :collection
   end
 
+  resources :expositions, only: [:index, :create, :destroy]
 
   get 'datatables/lang'
 
