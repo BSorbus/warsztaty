@@ -24,6 +24,7 @@ Rails.application.routes.draw do
   resources :surveys do
     get 'export', on: :collection
     get 'send_score', on: :collection 
+    get 'show_score', on: :collection 
   end
 
   resources :works, only: [:index] do

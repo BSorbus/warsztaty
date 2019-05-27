@@ -44,5 +44,13 @@
 		  <% end %>
 		</li>
   <% end %>
+
+  <% if Survey.all.count >= Role.find(5).users.count %>
+    <li><%= link_to show_score_surveys_path do %>
+      <span class="fa fa-poll"></span>&nbsp;<%=t ".surveys_score" %>
+      <% end %>
+    </li>
+  <% end %>
+  
 <% end %>
 

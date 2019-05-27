@@ -1,6 +1,6 @@
 class SurveysController < ApplicationController
   before_action :authenticate_user!
-  after_action :verify_authorized, except: [:new, :index, :datatables_index_user]
+  after_action :verify_authorized, except: [:new, :index, :datatables_index_user, :show_score]
   before_action :set_survey, only: [:show, :edit, :update, :destroy]
 
 
@@ -38,10 +38,12 @@ class SurveysController < ApplicationController
 
   # GET /surveys/1
   # GET /surveys/1.json
+  def show_score
+  end
+
   def show
     authorize @survey, :show_self?
   end
-
   # GET /surveys/new
   def new
     if current_user.surveys.any?

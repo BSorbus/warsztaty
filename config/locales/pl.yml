@@ -22,6 +22,7 @@ pl:
       job_5: 'Zadanie 5'
       introduction: 'Wprowadzenie'
       survey: 'Ankieta'
+      surveys_score: 'Wyniki'
     navigation_right_links:
       management: 'Zarządzanie'
       users: 'Użytkownicy'
@@ -81,6 +82,8 @@ pl:
       title: 'Edyja Ankiety'
     show:
       title: 'Ankieta'
+    show_score:
+      title: 'Wyniki Ankiet'
     note:
       fieldset_title: 'Uwagi dotyczące szkolenia/warsztatów'
     question_1:
