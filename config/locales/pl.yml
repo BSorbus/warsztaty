@@ -21,9 +21,10 @@ pl:
       job_4: 'Zadanie 4'
       job_5: 'Zadanie 5'
       introduction: 'Wprowadzenie'
-      survey: 'Ankieta'
-      surveys_score: 'Wyniki'
-      expositions: 'Galeria'
+      survey: 'Wypełnianie Ankiety'
+      surveys_score: 'Wyniki Ankiet'
+      expositions: 'Galeria Zdjęć'
+      extras: 'Dodatki'
     navigation_right_links:
       management: 'Zarządzanie'
       users: 'Użytkownicy'

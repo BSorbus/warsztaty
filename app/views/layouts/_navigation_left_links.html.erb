@@ -38,24 +38,34 @@
 	  </ul>
 	</li>
 
-  <% if policy(:survey).new_self? %>
-		<li><%= link_to new_survey_path do %>
-		  <span class="fa fa-list-ol"></span>&nbsp;<%=t ".survey" %>
-		  <% end %>
-		</li>
-  <% end %>
 
-  <% if Survey.all.count >= Role.find(5).users.count %>
-    <li><%= link_to show_score_surveys_path do %>
-      <span class="fa fa-poll"></span>&nbsp;<%=t ".surveys_score" %>
+  <li class="dropdown">
+    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-saved"></span>&nbsp;<%=t ".extras" %> <span class="caret"></span></a>
+
+    <ul class="dropdown-menu">
+
+      <% if policy(:survey).new_self? %>
+        <li><%= link_to new_survey_path do %>
+          <span class="fa fa-list-ol"></span>&nbsp;<%=t ".survey" %>
+          <% end %>
+        </li>
       <% end %>
-    </li>
-  <% end %>
 
-  <li><%= link_to expositions_path do %>
-    <span class="fa fa-camera"></span>&nbsp;<%=t ".expositions" %>
-    <% end %>
+      <% if Survey.all.count >= Role.find(5).users.count %>
+        <li><%= link_to show_score_surveys_path do %>
+          <span class="fa fa-poll"></span>&nbsp;<%=t ".surveys_score" %>
+          <% end %>
+        </li>
+      <% end %>
+
+      <li><%= link_to expositions_path do %>
+        <span class="fa fa-camera"></span>&nbsp;<%=t ".expositions" %>
+        <% end %>
+      </li>
+
+    </ul>
   </li>
+
   
 <% end %>
 
