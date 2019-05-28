@@ -19,8 +19,8 @@
               data-gallery="multiimages" 
               data-type="<%= row.photo.content_type.to_s.split('/')[0] %>" 
               data-toggle="lightbox" 
-              data-title="<%= row.name %>"
-              data-footer="<%= row.name %>" >
+              data-title="<%= row.fullname %>"
+              data-footer="<%= row.photo.blob.filename %>" >
             <% if row.photo.previewable? %>
               <%= image_tag(row.photo.preview(resize: '100x100')) %>
             <% else %>
