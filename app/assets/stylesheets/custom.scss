@@ -222,3 +222,11 @@ legend.my-fieldset {
   } 
 }
 
+.panel-exposition {
+  border-color: #ddd;
+  .panel-heading {
+    background: $brand-primary; //#1A3069;
+    color: white;
+  } 
+}
+

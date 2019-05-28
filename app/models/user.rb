@@ -55,7 +55,7 @@ class User < ApplicationRecord
   def password_complexity
     #if password.present? and not password.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[\W])/)
     if password.present? and not password.match(/(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*(_|[\W]))/)
-      errors.add :password, "Hasło musi zawierać małą literę, wielką literę, liczbę i symbol"
+      errors.add :password, "musi zawierać małą literę, wielką literę, liczbę i symbol"
     end
   end
 

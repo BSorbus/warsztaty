@@ -17,46 +17,24 @@
 
 <div class="container">
   <div class="row">
-
-    <% if policy(:exposition).create? %>
-
+    <% if policy(:exposition).new? %>
       <div class="col-sm-12">
-        <fieldset class="my-fieldset">
-          <legend class="my-fieldset"><%= t('.fieldset_title') %></legend>
-
-
-          <%= form_for Exposition.new do |f| %>
-
-            <div class="row">
-              <div class="form-group col-sm-6">
-                <%= f.label :name, class: 'control-label' %><br>
-                <%= f.text_field :name, class: 'form-control' %>
-              </div>
-              <div class="form-group col-sm-4">
-                <%= f.label :photo, class: 'control-label' %><br>
-                <%= f.file_field :photo, multiple: false, class: 'form-control' %>
-              </div>
-              <div class="form-group col-sm-2">
-                <br>
-                <%= f.submit nil, class: 'btn btn-success' %>
-              </div>
-
-            </div>
-
-          <% end %>
-        </fieldset>
-      </div> <!-- /col-sm-12 -->
+        <%= link_to new_exposition_path, class: "btn btn-primary pull-right" do %>
+          <span class="glyphicon glyphicon-plus"></span>
+          <%= t("helpers.links.new") %>
+        <% end %>
+      </div> <!--/col-sm-12 -->
+      <div class="col-sm-12">
+        <hr>
+      </div> <!--/col-sm-12 -->
     <% end %>
+  </div>
 
-  </div> <!--/row -->
-
-</div> <!--/container -->
-
-<div class="container">
   <div class="row">
     <div class="col-sm-12">
       <%= render 'gallery' %>
     </div> <!--/col-sm-12 -->
   </div> <!--/row -->
+
 </div> <!--/container -->
 
